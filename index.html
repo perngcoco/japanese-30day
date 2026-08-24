@@ -114,32 +114,22 @@ function speak(text, rate=0.9) {
     alert('此瀏覽器不支援語音朗讀。請使用 iPad Safari。');
     return;
   }
-  speechToken++;
-  speechSynthesis.cancel();
-  const u = new SpeechSynthesisUtterance(text);
-  u.lang = 'ja-JP';
-  u.rate = rate;
-  u.pitch = 1.0;
-  u.volume = 1.0;
-  window.setTimeout(() => speechSynthesis.speak(u), 80);
-}
-function speakSequence(parts, rate=0.9) {
-  if (!('speechSynthesis' in window)) return;
   const myToken = ++speechToken;
   speechSynthesis.cancel();
-  let i = 0;
-  const next = () => {
-    if (myToken !== speechToken || i >= parts.length) return;
-    const u = new SpeechSynthesisUtterance(parts[i++]);
+  window.setTimeout(() => {
+    if (myToken !== speechToken) return;
+    const u = new SpeechSynthesisUtterance(text);
     u.lang = 'ja-JP';
     u.rate = rate;
     u.pitch = 1.0;
     u.volume = 1.0;
-    u.onend = () => window.setTimeout(next, 220);
-    u.onerror = () => window.setTimeout(next, 220);
+    speechSynthesis.resume();
     speechSynthesis.speak(u);
-  };
-  window.setTimeout(next, 80);
+  }, 320);
+}
+function speakSequence(parts, rate=0.9) {
+  const text = parts.filter(Boolean).join('。') + '。';
+  speak(text, rate);
 }
 function renderSidebar() {
   const sb = document.getElementById('sidebar');
