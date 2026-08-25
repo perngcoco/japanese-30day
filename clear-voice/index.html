@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f7f7fb">
+<title>30天日文自學｜發音入口</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"PingFang TC",sans-serif;background:#f7f7fb;color:#1d1d1f;padding:24px}.box{max-width:620px;margin:40px auto;background:#fff;border:1px solid #e5e5ea;border-radius:22px;padding:24px;box-shadow:0 8px 28px rgba(0,0,0,.06)}h1{font-size:30px;margin:0 0 12px}.lead{line-height:1.7;color:#555;margin-bottom:18px}.ok,.warn{padding:14px 16px;border-radius:14px;line-height:1.65;margin:14px 0}.ok{background:#edf8f1;border:1px solid #b9dfc8}.warn{background:#fff4d6;border:1px solid #efd58a}a.btn{display:block;text-align:center;text-decoration:none;background:#356ae6;color:#fff;font-weight:700;padding:15px 18px;border-radius:14px;margin-top:16px}.small{font-size:13px;color:#777;line-height:1.6;margin-top:14px}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>30天日文自學</h1>
+<div class="lead">日文發音建議：Android 使用 <strong>Samsung Internet</strong>；iPad 使用 <strong>Safari</strong>。</div>
+<div id="msg"></div>
+<a class="btn" id="enter" href="../index.html">進入 30 天日文自學</a>
+<div class="small">若使用 Android Chrome，可能出現「播放完成但沒有聲音」；這是 Chrome 與手機 TTS 的相容性問題。</div>
+</div>
+<script>
+(function(){
+  var ua=navigator.userAgent||'';
+  var isAndroid=/Android/i.test(ua);
+  var isSamsung=/SamsungBrowser/i.test(ua);
+  var isChrome=/Chrome\//i.test(ua)&&!isSamsung;
+  var isiPad=/iPad/i.test(ua)||(/Macintosh/i.test(ua)&&navigator.maxTouchPoints>1);
+  var msg=document.getElementById('msg');
+  if(isAndroid&&isSamsung){
+    msg.className='ok';
+    msg.textContent='✓ 已使用 Samsung Internet，可直接進入。';
+  }else if(isAndroid&&isChrome){
+    msg.className='warn';
+    msg.innerHTML='<strong>目前是 Android Chrome。</strong><br>建議改用 Samsung Internet 開啟這個網址，再進入學習頁，日文發音才會正常。';
+  }else if(isiPad){
+    msg.className='ok';
+    msg.textContent='✓ iPad 建議使用 Safari，可直接進入。';
+  }else{
+    msg.className='ok';
+    msg.textContent='可直接進入；若發音沒有聲音，請改用裝置建議的瀏覽器。';
+  }
+})();
+</script>
+</body>
+</html>
