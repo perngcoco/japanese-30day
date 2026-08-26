@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>30天日文自學｜字帖</title>
+<style>
+:root{--bg:#f7f7fb;--card:#fff;--text:#1d1d1f;--muted:#6e6e73;--accent:#356ae6;--border:#dedee5;--soft:#eef3ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang TC","Noto Sans TC",sans-serif}.app{max-width:980px;margin:auto;padding:20px}.head{display:flex;justify-content:space-between;gap:12px;align-items:flex-end;flex-wrap:wrap;margin-bottom:16px}h1{margin:0;font-size:clamp(28px,5vw,42px)}.sub{color:var(--muted);margin-top:6px}.tools{display:flex;gap:8px;flex-wrap:wrap}button,select{font:inherit;border:0;border-radius:12px;padding:11px 14px;min-height:44px}button{background:var(--accent);color:white;font-weight:700}button.secondary{background:#eceef2;color:var(--text)}select{background:white;border:1px solid var(--border);min-width:190px}.sheet{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:20px}.daytitle{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.daytitle h2{margin:0}.focus{color:var(--muted);margin:5px 0 18px}.row{margin:18px 0 26px;page-break-inside:avoid}.meta{display:flex;gap:12px;align-items:baseline;margin-bottom:8px}.char{font-size:32px;font-weight:750}.roma{color:var(--muted)}.word{font-size:18px;font-weight:650}.meaning{color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:repeat(6,minmax(72px,1fr));gap:8px}.box{aspect-ratio:1/1;position:relative;border:1.5px solid #b9bcc5;background:#fff;overflow:hidden}.box::before,.box::after{content:"";position:absolute;pointer-events:none;z-index:0}.box::before{left:50%;top:0;bottom:0;border-left:1px dashed #ddd}.box::after{top:50%;left:0;right:0;border-top:1px dashed #ddd}.model,.trace{display:flex;align-items:center;justify-content:center;font-size:clamp(38px,7vw,70px);line-height:1;position:absolute;inset:0;z-index:1;pointer-events:none}.trace{color:#d6d8de}.model{color:#222}.draw{position:absolute;inset:0;width:100%;height:100%;z-index:2;touch-action:none}.hint{margin-top:18px;padding:14px;background:var(--soft);border-radius:14px;line-height:1.6;color:#41434a}.nav{margin-top:18px;display:flex;gap:8px;justify-content:space-between}.nav button{flex:1}.back{display:inline-block;margin-bottom:14px;color:var(--accent);text-decoration:none;font-weight:650}
+@media(max-width:720px){.app{padding:14px}.sheet{padding:14px}.grid{grid-template-columns:repeat(3,1fr)}.tools{width:100%}.tools select{flex:1}.tools button{flex:1}}
+@media(prefers-color-scheme:dark){:root{--bg:#111214;--card:#1b1c1f;--text:#f4f4f5;--muted:#a1a1a6;--border:#35373c;--soft:#202b45}.box{background:#fff}.model{color:#111}}
+@media print{body{background:white}.app{max-width:none;padding:0}.head .tools,.nav,.back,.hint{display:none}.sheet{border:0;padding:0}.grid{grid-template-columns:repeat(6,1fr)}.draw{display:none}h1{font-size:26px}}
+</style>
+</head>
+<body><div class="app">
+<a class="back" href="../">← 回到 30 天日文自學</a>
+<div class="head"><div><h1>✍️ 日文字帖</h1><div class="sub">每天假名＋單字｜描寫・臨寫・自由練習</div></div><div class="tools"><select id="daySelect"></select><button id="clearBtn" class="secondary">清除筆跡</button><button onclick="window.print()">列印字帖</button></div></div>
+<div class="sheet"><div class="daytitle"><h2 id="title"></h2><span id="count"></span></div><div id="focus" class="focus"></div><div id="rows"></div><div class="hint">使用方式：第 1 格看範字，第 2～3 格沿淡字描寫，第 4～6 格自己寫。iPad 可用 Apple Pencil，Android 可用觸控筆或手指。</div><div class="nav"><button id="prev" class="secondary">← 前一天</button><button id="next">下一天 →</button></div></div>
+</div>
+<script>
+const DAYS=[
+[1,'あ行','あ・い・う・え・お',[['あ','a','あさ','早上'],['い','i','いえ','家'],['う','u','うえ','上面'],['え','e','えき','車站'],['お','o','おと','聲音']]],
+[2,'か行','か・き・く・け・こ',[['か','ka','かさ','雨傘'],['き','ki','き','樹'],['く','ku','くち','嘴巴'],['け','ke','けさ','今天早上'],['こ','ko','ここ','這裡']]],
+[3,'さ行','さ・し・す・せ・そ',[['さ','sa','さかな','魚'],['し','shi','しお','鹽'],['す','su','すし','壽司'],['せ','se','せかい','世界'],['そ','so','そら','天空']]],
+[4,'た行','た・ち・つ・て・と',[['た','ta','たまご','蛋'],['ち','chi','ちず','地圖'],['つ','tsu','つき','月亮'],['て','te','て','手'],['と','to','とけい','時鐘']]],
+[5,'な行','な・に・ぬ・ね・の',[['な','na','なつ','夏天'],['に','ni','にく','肉'],['ぬ','nu','ぬの','布'],['ね','ne','ねこ','貓'],['の','no','のり','海苔']]],
+[6,'は行','は・ひ・ふ・へ・ほ',[['は','ha','はな','花'],['ひ','hi','ひと','人'],['ふ','fu','ふね','船'],['へ','he','へや','房間'],['ほ','ho','ほん','書']]],
+[7,'ま行＋週複習','ま・み・む・め・も',[['ま','ma','まど','窗戶'],['み','mi','みず','水'],['む','mu','むし','昆蟲'],['め','me','め','眼睛'],['も','mo','もも','桃子']]],
+[8,'や行','や・ゆ・よ',[['や','ya','やま','山'],['ゆ','yu','ゆき','雪'],['よ','yo','よる','晚上']]],
+[9,'ら行','ら・り・る・れ・ろ',[['ら','ra','らいねん','明年'],['り','ri','りんご','蘋果'],['る','ru','るす','不在家'],['れ','re','れい','例子'],['ろ','ro','ろく','六']]],
+[10,'わ行・ん','わ・を・ん',[['わ','wa','わたし','我'],['を','o','を','助詞'],['ん','n','ほん','書']]],
+[11,'濁音①','が・ぎ・ぐ・げ・ご／ざ・じ・ず・ぜ・ぞ',[['が','ga','がくせい','學生'],['ぎ','gi','ぎんこう','銀行'],['ぐ','gu','ぐあい','狀況'],['ざ','za','ざっし','雜誌'],['じ','ji','じかん','時間']]],
+[12,'濁音②・半濁音','だ・ば・ぱ行',[['だ','da','だれ','誰'],['で','de','でんわ','電話'],['ば','ba','ばん','晚上'],['び','bi','びょういん','醫院'],['ぱ','pa','パン','麵包']]],
+[13,'拗音','きゃ・きゅ・きょ 等',[['きゃ','kya','きゃく','客人'],['きゅ','kyu','きゅう','九'],['きょ','kyo','きょう','今天'],['しゃ','sha','しゃしん','照片'],['ちょ','cho','ちょっと','一下']]],
+[14,'促音・長音','っ／ー',[['っ','pause','きって','郵票'],['っ','pause','がっこう','學校'],['ー','long','コーヒー','咖啡']]],
+[15,'平假名總複習','46音＋濁音＋拗音',[['あ','a','あした','明天'],['き','ki','きょう','今天'],['せ','se','せんせい','老師'],['ね','ne','ねこ','貓'],['わ','wa','わたし','我']]],
+[16,'片假名①','ア・イ・ウ・エ・オ／カ行',[['ア','a','アイス','冰淇淋'],['イ','i','インク','墨水'],['ウ','u','ウール','羊毛'],['エ','e','エアコン','冷氣'],['オ','o','オレンジ','橘子']]],
+[17,'片假名②','サ行・タ行',[['サ','sa','サラダ','沙拉'],['シ','shi','シーツ','床單'],['ス','su','スープ','湯'],['タ','ta','タクシー','計程車'],['ツ','tsu','ツアー','旅行團']]],
+[18,'片假名③','ナ行・ハ行',[['ナ','na','ナイフ','刀子'],['ニ','ni','ニュース','新聞'],['ハ','ha','ハンバーガー','漢堡'],['ヒ','hi','ヒント','提示'],['フ','fu','フルーツ','水果']]],
+[19,'片假名④','マ行・ヤ行',[['マ','ma','マスク','口罩'],['ミ','mi','ミルク','牛奶'],['ム','mu','ムード','氣氛'],['ヤ','ya','ヤード','碼'],['ユ','yu','ユーモア','幽默']]],
+[20,'片假名⑤','ラ行・ワ・ン',[['ラ','ra','ラジオ','收音機'],['リ','ri','リスト','清單'],['ル','ru','ルール','規則'],['ワ','wa','ワイン','葡萄酒'],['ン','n','パン','麵包']]],
+[21,'片假名濁音','ガ・ザ・ダ・バ・パ行',[['ガ','ga','ガス','瓦斯'],['ジ','ji','ジム','健身房'],['バ','ba','バス','公車'],['ビ','bi','ビル','大樓'],['パ','pa','パン','麵包']]],
+[22,'片假名拗音・促音','キャ・ッ・ー',[['キャ','kya','キャベツ','高麗菜'],['シュ','shu','シューズ','鞋子'],['ッ','pause','ベッド','床'],['ー','long','スーパー','超市']]],
+[23,'片假名總複習','生活外來語',[['コンビニ','konbini','コンビニ','便利商店'],['ホテル','hoteru','ホテル','飯店'],['テレビ','terebi','テレビ','電視'],['コーヒー','koohii','コーヒー','咖啡'],['タクシー','takushii','タクシー','計程車']]],
+[24,'我是～','わたし／あなた＋です',[['わたし','watashi','わたし','我'],['あなた','anata','あなた','你'],['せんせい','sensei','せんせい','老師'],['がくせい','gakusei','がくせい','學生'],['かいしゃいん','kaishain','かいしゃいん','公司職員']]],
+[25,'肯定・否定','～です／～ではありません',[['です','desu','です','是'],['ではありません','dewa arimasen','ではありません','不是'],['にほんじん','nihonjin','にほんじん','日本人'],['がくせい','gakusei','がくせい','學生']]],
+[26,'疑問句','～ですか',[['ですか','desu ka','ですか','是……嗎？'],['はい','hai','はい','是'],['いいえ','iie','いいえ','不是'],['そうです','sou desu','そうです','是的']]],
+[27,'這個・那個','これ／それ／あれ',[['これ','kore','これ','這個'],['それ','sore','それ','那個'],['あれ','are','あれ','那個（遠處）'],['ほん','hon','ほん','書']]],
+[28,'這裡・那裡','ここ／そこ／あそこ',[['ここ','koko','ここ','這裡'],['そこ','soko','そこ','那裡'],['あそこ','asoko','あそこ','那邊'],['トイレ','toire','トイレ','廁所']]],
+[29,'の・も','～的／也',[['の','no','の','的'],['も','mo','も','也'],['わたしの','watashi no','わたしの','我的'],['ともだち','tomodachi','ともだち','朋友']]],
+[30,'總複習・N5銜接','五十音＋基礎句型',[['おはよう','ohayou','おはよう','早安'],['こんにちは','konnichiwa','こんにちは','你好'],['ありがとう','arigatou','ありがとう','謝謝'],['すみません','sumimasen','すみません','不好意思'],['さようなら','sayounara','さようなら','再見']]]
+];
+let day=Math.max(1,Math.min(30,Number(localStorage.getItem('jp30-worksheet-day')||1)));
+const sel=document.getElementById('daySelect');DAYS.forEach(d=>{const o=document.createElement('option');o.value=d[0];o.textContent=`Day ${d[0]}｜${d[1]}`;sel.appendChild(o)});sel.value=day;
+function makeCanvas(){const c=document.createElement('canvas');c.className='draw';let ctx,drawing=false,last=null;function resize(){const r=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1;c.width=Math.round(r.width*dpr);c.height=Math.round(r.height*dpr);ctx=c.getContext('2d');ctx.scale(dpr,dpr);ctx.lineWidth=3;ctx.lineCap='round';ctx.lineJoin='round';ctx.strokeStyle='#222'}requestAnimationFrame(resize);function pos(e){const r=c.getBoundingClientRect(),p=e.touches?e.touches[0]:e;return{x:p.clientX-r.left,y:p.clientY-r.top}}function start(e){e.preventDefault();drawing=true;last=pos(e);c.setPointerCapture&&e.pointerId!=null&&c.setPointerCapture(e.pointerId)}function move(e){if(!drawing)return;e.preventDefault();const p=pos(e);ctx.beginPath();ctx.moveTo(last.x,last.y);ctx.lineTo(p.x,p.y);ctx.stroke();last=p}function end(){drawing=false;last=null}c.addEventListener('pointerdown',start);c.addEventListener('pointermove',move);c.addEventListener('pointerup',end);c.addEventListener('pointercancel',end);return c}
+function render(){const d=DAYS[day-1];document.getElementById('title').textContent=`Day ${d[0]}｜${d[1]}`;document.getElementById('focus').textContent=`今日重點：${d[2]}`;document.getElementById('count').textContent=`${d[3].length} 組`;const rows=document.getElementById('rows');rows.innerHTML='';d[3].forEach(i=>{const row=document.createElement('div');row.className='row';row.innerHTML=`<div class="meta"><span class="char">${i[0]}</span><span class="roma">${i[1]}</span><span class="word">${i[2]}</span><span class="meaning">${i[3]}</span></div><div class="grid"></div>`;const g=row.querySelector('.grid');for(let n=0;n<6;n++){const b=document.createElement('div');b.className='box';if(n===0)b.innerHTML=`<div class="model">${i[0]}</div>`;else if(n<3)b.innerHTML=`<div class="trace">${i[0]}</div>`;const c=makeCanvas();b.appendChild(c);g.appendChild(b)}rows.appendChild(row)});sel.value=day;localStorage.setItem('jp30-worksheet-day',day)}
+sel.addEventListener('change',()=>{day=Number(sel.value);render()});document.getElementById('prev').onclick=()=>{day=Math.max(1,day-1);render()};document.getElementById('next').onclick=()=>{day=Math.min(30,day+1);render()};document.getElementById('clearBtn').onclick=()=>document.querySelectorAll('canvas.draw').forEach(c=>{const x=c.getContext('2d');x.clearRect(0,0,c.width,c.height)});render();
+</script></body></html>
