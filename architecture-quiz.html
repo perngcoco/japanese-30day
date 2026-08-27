@@ -1149,10 +1149,15 @@ document.addEventListener('DOMContentLoaded', function(){
   let mode='test';
 
   function updateAnsweredProgress(){
-    let answered=0;
-    document.querySelectorAll('section.q').forEach(q=>{
-      if(q.querySelector('input[type="radio"]:checked')) answered++;
+    const answeredNames=new Set();
+    document.querySelectorAll('section.q input[type="radio"]:checked').forEach(i=>{
+      if(i.name) answeredNames.add(i.name);
     });
+    const answered=answeredNames.size;
+
+    const dedicated=document.getElementById('answeredProgressText');
+    if(dedicated) dedicated.textContent='已作答 '+answered+' / 80';
+
     const pt=document.querySelector('.progress-text');
     if(pt){
       const spans=pt.querySelectorAll('span');
@@ -1229,6 +1234,12 @@ document.addEventListener('DOMContentLoaded', function(){
     document.querySelectorAll('section.q').forEach(q=>q.classList.toggle('active',q.id===id));
     window.scrollTo({top:0,behavior:'auto'});
   }
+  document.addEventListener('change',function(e){
+      if(e.target && e.target.matches('section.q input[type="radio"]')){
+        updateAnsweredProgress();
+      }
+    });
+
   window.addEventListener('hashchange',syncActive);
 
   const restartPracticeBtn=document.getElementById('restartPracticeBtn');
@@ -1261,6 +1272,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 
+  window.addEventListener('pageshow',updateAnsweredProgress);
   updateAnsweredProgress();
   syncActive();
 });
