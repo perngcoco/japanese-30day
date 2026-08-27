@@ -61,7 +61,7 @@ button,input{font:inherit}button{touch-action:manipulation}.wrap{max-width:980px
       <label class="radio"><input type="radio" name="mode" value="exam"><span><b>測驗模式</b><br><small>全部作答後再交卷看成績</small></span></label>
     </div>
     <div style="height:16px"></div>
-    <button id="startBtn" class="primary full">開始 80 題隨機抽題</button>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px"><button id="startBtn" class="primary">開始 80 題隨機抽題</button><button id="refreshBankBtn" class="secondary">刷新題庫／重新抽 80 題</button></div>
     <div id="bankStat" class="statline"></div>
     <div class="footnote">PDF 中標示「本題刪題」者已自動排除。題目與正解依提供之題庫 PDF。</div>
   </section>
@@ -98,7 +98,7 @@ button,input{font:inherit}button{touch-action:manipulation}.wrap{max-width:980px
     </div>
     <div class="nav">
       <button id="reviewBtn" class="secondary">查看錯題</button>
-      <button id="retryBtn" class="primary">重新抽 80 題</button>
+      
       <button id="backBtn" class="secondary wide">回到模式設定</button>
     </div>
     <div id="reviewList" class="hidden" style="margin-top:18px"></div>
@@ -128,7 +128,7 @@ function init(){
   document.querySelectorAll('[data-count]').forEach(b=>b.onclick=()=>{$('count').value=b.dataset.count;updatePreview()});
   $('count').addEventListener('input',updatePreview);document.querySelectorAll('.sec').forEach(x=>x.addEventListener('change',updatePreview));
   $('startBtn').onclick=()=>startQuiz(); $('prevBtn').onclick=()=>move(-1); $('nextBtn').onclick=()=>move(1); $('submitBtn').onclick=finish;
-  $('retryBtn').onclick=()=>startQuiz(lastConfig); $('backBtn').onclick=showSetup; $('reviewBtn').onclick=toggleReview;updatePreview();
+  $('refreshBankBtn').onclick=()=>startQuiz(lastConfig||{secs:selectedSections(),count:80,mode:document.querySelector('input[name=mode]:checked').value}); $('backBtn').onclick=showSetup; $('reviewBtn').onclick=toggleReview;updatePreview();
 }
 function selectedSections(){return [...document.querySelectorAll('.sec:checked')].map(x=>+x.value)}
 function shuffled(a){a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
