@@ -706,7 +706,19 @@ body:has(#q80 input[value="2"]:checked) #wrong80 .ya2{display:inline}
 body:has(#q80 input[value="4"]:checked) #wrong80{display:block}
 body:has(#q80 input[value="4"]:checked) #wrong80 .ya4{display:inline}
 body:not(:has(#q80 input:checked)) #wrong80{display:block}
-body:not(:has(#q80 input:checked)) #wrong80 .ya0{display:inline}</style></head><body><div class="wrap"><div class="top"><h1>建築製圖丙級｜80 題測驗</h1><div class="sub">固定 80 題：專業 64 題＋共同科目 1～4 各 4 題。iPad 本機相容版：一題一頁，最後交卷顯示分數與錯題。</div><div class="nojs-note">作答完成第 80 題後，請按「交卷並計分」。結果頁會顯示總分、答對題數，以及答錯／未作答題目。</div><div id="score"></div>
+body:not(:has(#q80 input:checked)) #wrong80 .ya0{display:inline}</style>
+<style id="practice-mode-style">
+.mode-switch{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.mode-btn{min-height:44px;border:1px solid #bdd0e2;border-radius:12px;background:#f6f9fc;color:#36536c;font-size:16px;font-weight:800}
+.mode-btn.active{background:#1767a7;color:#fff;border-color:#1767a7}
+.mode-desc{margin-top:8px;font-size:14px;color:#62758a}
+body.practice-mode .opt.practice-correct{border-color:#3a9b67;background:#eaf8f0}
+body.practice-mode .opt.practice-wrong{border-color:#d66b78;background:#fff0f2}
+body.practice-mode .fb.practice-feedback{display:block!important;margin-top:12px;padding:12px 14px;border-radius:12px;font-weight:800}
+body.practice-mode .fb.practice-feedback.correct{background:#e9f8ef;color:#17653f}
+body.practice-mode .fb.practice-feedback.wrong{background:#fff0f1;color:#a12635}
+@media(max-width:600px){.mode-btn{font-size:15px}.mode-desc{font-size:13px}}
+</style></head><body><div class="wrap"><div class="top"><h1>建築製圖丙級｜80 題測驗</h1><div class="sub">固定 80 題：專業 64 題＋共同科目 1～4 各 4 題。iPad 本機相容版：一題一頁，最後交卷顯示分數與錯題。</div><div class="nojs-note">作答完成第 80 題後，請按「交卷並計分」。結果頁會顯示總分、答對題數，以及答錯／未作答題目。</div><div id="score"></div>
 <div class="progress-wrap"><div class="progress-text"><span id="counter">第 1 / 80 題</span><span id="answered">已作答 0 / 80</span></div><div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div><div class="jump"><select aria-label="跳至題目" id="jumpSelect"></select></div></div></div>
 <section class="q" data-answer="4" id="q1">
 <div class="meta">第 1 題　專業科目｜基本圖學｜原題第 42 題</div>
@@ -1113,4 +1125,89 @@ body:not(:has(#q80 input:checked)) #wrong80 .ya0{display:inline}</style></head><
 
 
 
-</body></html>
+
+<script id="practice-mode-script">
+document.addEventListener('DOMContentLoaded', function(){
+  const top = document.querySelector('.top');
+  if(!top) return;
+
+  document.body.classList.add('js-mode');
+  document.querySelectorAll('section.q').forEach(q=>q.classList.remove('active'));
+  const first=document.querySelector('section.q');
+  if(first) first.classList.add('active');
+
+  const bar=document.createElement('div');
+  bar.className='mode-switch';
+  bar.innerHTML='<button type="button" class="mode-btn active" data-mode="test">測驗模式</button><button type="button" class="mode-btn" data-mode="practice">練習模式</button>';
+  const desc=document.createElement('div');
+  desc.className='mode-desc';
+  desc.textContent='測驗模式：80 題完成後再計分與檢討錯題。';
+  const sub=top.querySelector('.sub');
+  (sub||top.lastElementChild).insertAdjacentElement('afterend',bar);
+  bar.insertAdjacentElement('afterend',desc);
+
+  let mode='test';
+
+  function resetAll(){
+    document.querySelectorAll('section.q input[type="radio"]').forEach(i=>i.checked=false);
+    document.querySelectorAll('.opt').forEach(o=>o.classList.remove('practice-correct','practice-wrong'));
+    document.querySelectorAll('.fb').forEach(f=>{f.classList.remove('practice-feedback','correct','wrong'); f.textContent='';});
+    location.hash='q1';
+    document.querySelectorAll('section.q').forEach((q,i)=>q.classList.toggle('active',i===0));
+  }
+
+  function setMode(next){
+    if(mode===next) return;
+    mode=next;
+    document.body.classList.toggle('practice-mode', mode==='practice');
+    bar.querySelectorAll('.mode-btn').forEach(b=>b.classList.toggle('active',b.dataset.mode===mode));
+    desc.textContent = mode==='practice'
+      ? '練習模式：每題作答後立即顯示答對／答錯與正確答案。'
+      : '測驗模式：80 題完成後再計分與檢討錯題。';
+    resetAll();
+    const last=document.querySelector('#q80 .submit-link');
+    if(last){
+      last.textContent = mode==='practice' ? '完成練習' : '交卷並計分';
+      last.href = mode==='practice' ? '#q1' : '#result';
+    }
+  }
+
+  bar.addEventListener('click',e=>{
+    const b=e.target.closest('.mode-btn');
+    if(b) setMode(b.dataset.mode);
+  });
+
+  document.querySelectorAll('section.q').forEach(q=>{
+    q.addEventListener('change',e=>{
+      if(mode!=='practice' || !e.target.matches('input[type="radio"]')) return;
+      const answer=q.dataset.answer;
+      const picked=e.target.value;
+      const fb=q.querySelector('.fb');
+      q.querySelectorAll('.opt').forEach(o=>o.classList.remove('practice-correct','practice-wrong'));
+
+      const correctInput=q.querySelector('input[value="'+answer+'"]');
+      const pickedInput=q.querySelector('input[value="'+picked+'"]');
+      const correctLabel=correctInput ? correctInput.closest('.opt') : null;
+      const pickedLabel=pickedInput ? pickedInput.closest('.opt') : null;
+      if(correctLabel) correctLabel.classList.add('practice-correct');
+
+      const correctText=correctLabel ? correctLabel.innerText.trim() : ('選項 '+answer);
+      if(picked===answer){
+        if(fb){fb.textContent='答對了。正確答案：'+correctText; fb.className='fb practice-feedback correct';}
+      }else{
+        if(pickedLabel) pickedLabel.classList.add('practice-wrong');
+        if(fb){fb.textContent='答錯了。正確答案：'+correctText; fb.className='fb practice-feedback wrong';}
+      }
+    });
+  });
+
+  function syncActive(){
+    const id=(location.hash||'#q1').slice(1);
+    if(id==='result') return;
+    document.querySelectorAll('section.q').forEach(q=>q.classList.toggle('active',q.id===id));
+    window.scrollTo({top:0,behavior:'auto'});
+  }
+  window.addEventListener('hashchange',syncActive);
+  syncActive();
+});
+</script></body></html>
