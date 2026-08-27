@@ -1148,10 +1148,30 @@ document.addEventListener('DOMContentLoaded', function(){
 
   let mode='test';
 
+  function updateAnsweredProgress(){
+    let answered=0;
+    document.querySelectorAll('section.q').forEach(q=>{
+      if(q.querySelector('input[type="radio"]:checked')) answered++;
+    });
+    const pt=document.querySelector('.progress-text');
+    if(pt){
+      const spans=pt.querySelectorAll('span');
+      if(spans.length>=2){
+        spans[0].textContent='填寫進度';
+        spans[1].textContent='已作答 '+answered+' / 80';
+      }else{
+        pt.textContent='填寫進度　已作答 '+answered+' / 80';
+      }
+    }
+    const fill=document.querySelector('.progress-fill');
+    if(fill) fill.style.width=(answered/80*100)+'%';
+  }
+
   function resetAll(){
     document.querySelectorAll('section.q input[type="radio"]').forEach(i=>i.checked=false);
     document.querySelectorAll('.opt').forEach(o=>o.classList.remove('practice-correct','practice-wrong'));
     document.querySelectorAll('.fb').forEach(f=>{f.classList.remove('practice-feedback','correct','wrong'); f.textContent='';});
+    updateAnsweredProgress();
     location.hash='q1';
     document.querySelectorAll('section.q').forEach((q,i)=>q.classList.toggle('active',i===0));
   }
@@ -1179,7 +1199,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
   document.querySelectorAll('section.q').forEach(q=>{
     q.addEventListener('change',e=>{
-      if(mode!=='practice' || !e.target.matches('input[type="radio"]')) return;
+      if(!e.target.matches('input[type="radio"]')) return;
+      updateAnsweredProgress();
+      if(mode!=='practice') return;
       const answer=q.dataset.answer;
       const picked=e.target.value;
       const fb=q.querySelector('.fb');
@@ -1224,6 +1246,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 
+  updateAnsweredProgress();
   syncActive();
 });
 </script></body></html>
