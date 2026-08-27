@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,maximum-scale=1" name="viewport"/><title>建築製圖丙級 80題 iPad 題庫</title>
+<style>
+body{margin:0;background:#f4f7fb;color:#182334;font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",sans-serif;font-size:18px;line-height:1.55}.wrap{max-width:900px;margin:auto;padding:18px}.top{background:white;border-radius:18px;padding:20px;margin-bottom:16px;position:sticky;top:0;z-index:3;box-shadow:0 4px 20px #0001}h1{font-size:26px;margin:0 0 6px;color:#155a91}.sub{font-size:14px;color:#68788a}.q{background:white;border:1px solid #d8e2ec;border-radius:16px;padding:18px;margin:14px 0}.meta{font-size:14px;color:#58718a;font-weight:700}.stem{font-size:21px;font-weight:750;margin:10px 0 14px}.opt{display:flex;align-items:flex-start;gap:10px;border:1px solid #d5dfeb;border-radius:13px;padding:12px;margin:9px 0;background:#fff}.opt input{width:22px;height:22px;flex:0 0 auto;margin-top:3px}.visual{overflow:auto;border:1px solid #ddd;border-radius:10px;padding:6px;margin:10px 0}.visual img{max-width:100%;height:auto;display:block;margin:auto}button{width:100%;min-height:54px;border:0;border-radius:13px;background:#1767a7;color:#fff;font-size:19px;font-weight:800}.fb{display:none;margin-top:10px;padding:10px;border-radius:10px}.ok{display:block;background:#e9f8ef;color:#17653f}.bad{display:block;background:#fff0f1;color:#a12635}#score{font-size:22px;font-weight:800;margin-top:10px}@media(max-width:600px){body{font-size:17px}.wrap{padding:10px}.q{padding:15px}.stem{font-size:19px}}
+
+.q{display:block;margin:14px 0 110px}body.js-mode section.q{display:none}body.js-mode section.q.active{display:block}.top{position:sticky;top:0}.progress-wrap{margin-top:12px}.progress-text{display:flex;justify-content:space-between;gap:12px;font-size:15px;font-weight:700;color:#36536c}.progress-bar{height:10px;background:#e4edf5;border-radius:999px;overflow:hidden;margin-top:7px}.progress-fill{height:100%;width:1.25%;background:#1767a7;transition:width .2s}.nav{position:fixed;left:0;right:0;bottom:0;background:rgba(244,247,251,.97);backdrop-filter:blur(8px);border-top:1px solid #d9e4ee;padding:10px;z-index:10}.navin{max-width:900px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:10px}.nav button{min-height:52px}.nav button.secondary{background:#6e7f90}.nav button:disabled{opacity:.4}.submit-wrap{display:none;max-width:900px;margin:0 auto 100px;padding:0 10px}.submit-wrap.show{display:block}.jump{display:flex;gap:8px;align-items:center;margin-top:10px}.jump select{flex:1;min-height:44px;border:1px solid #cfdbe7;border-radius:10px;padding:0 10px;font-size:16px;background:white}
+@media(max-width:600px){.top{padding:14px}.top h1{font-size:22px}.sub{display:none}.progress-text{font-size:14px}.nav{padding:8px}.nav button{font-size:17px}.q{margin-bottom:100px}}
+</style>
+<style id="nojs-nav-fix">
+/* iPad local preview fallback: pure HTML/CSS one-question navigation */
+body:not(.js-mode) section.q{display:none!important;margin-bottom:24px}
+body:not(.js-mode) section.q:first-of-type{display:block!important}
+body:not(.js-mode) section.q:target{display:block!important}
+body:not(.js-mode):has(section.q:target) section.q:first-of-type:not(:target){display:none!important}
+body:not(.js-mode) .nav{display:none!important}
+body:not(.js-mode) .submit-wrap{display:none!important}
+.qnav-fallback{display:none;margin-top:22px;grid-template-columns:1fr 1fr;gap:10px}
+body:not(.js-mode) .qnav-fallback{display:grid}
+.qnav-fallback a{display:flex;align-items:center;justify-content:center;min-height:52px;border-radius:13px;background:#1767a7;color:#fff;text-decoration:none;font-size:18px;font-weight:800}
+.qnav-fallback a.secondary{background:#6e7f90}
+.qnav-fallback a.disabled{opacity:.35;pointer-events:none}
+.nojs-note{display:none;background:#fff7db;border:1px solid #ead58c;border-radius:12px;padding:10px 12px;margin-top:10px;font-size:14px;color:#705400}
+body:not(.js-mode) .nojs-note{display:block}
+body:not(.js-mode) .jump{display:none}
+body:not(.js-mode) .progress-wrap{display:none}
+</style>
+<style>
+/* iPad local-file CSS-first one-question mode */
+body{counter-reset:correctCount}
+input.correct:checked{counter-increment:correctCount}
+body section.q{
+  position:absolute!important; left:-10000px!important; top:auto!important;
+  width:1px!important; height:1px!important; overflow:hidden!important;
+  opacity:0!important; pointer-events:none!important; margin:0!important;
+}
+body section.q:first-of-type{
+  position:static!important; left:auto!important; width:auto!important; height:auto!important;
+  overflow:visible!important; opacity:1!important; pointer-events:auto!important; margin:14px 0 30px!important;
+}
+body:has(section.q:target) section.q:first-of-type:not(:target),
+body:has(#result:target) section.q:first-of-type{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important;opacity:0!important;pointer-events:none!important;margin:0!important}
+body section.q:target{
+  position:static!important; left:auto!important; width:auto!important; height:auto!important;
+  overflow:visible!important; opacity:1!important; pointer-events:auto!important; margin:14px 0 30px!important;
+}
+.qnav-fallback{display:grid!important}
+.qnav-fallback .submit-link{background:#138a55}
+.result-page{
+  display:none;background:#fff;border:1px solid #d8e2ec;border-radius:18px;
+  padding:20px;margin:14px 0 40px
+}
+#result:target{display:block}
+#result h2{margin-top:0;color:#155a91}
+.score-card{background:#eef7ff;border:1px solid #cfe4f5;border-radius:16px;padding:18px;margin:12px 0 20px}
+.score-main{font-size:28px;font-weight:900;color:#155a91}
+.correct-count::after{content:counter(correctCount)}
+.score-percent{font-size:18px;font-weight:800;margin-top:6px}
+.score-help{font-size:14px;color:#5e7183;margin-top:8px}
+.wrong-item{display:none;border:1px solid #efc8cc;background:#fff6f7;border-radius:14px;padding:14px;margin:12px 0}
+.wrong-head{font-size:14px;font-weight:800;color:#a12635}
+.wrong-stem{font-size:18px;font-weight:750;margin:6px 0 10px}
+.your-answer{color:#9a2834;font-weight:700}
+.correct-answer{color:#17653f;font-weight:800;margin-top:6px}
+.your-answer span{display:none}
+.result-actions{margin-top:20px}
+.result-actions a{display:flex;align-items:center;justify-content:center;min-height:54px;border-radius:13px;background:#1767a7;color:#fff;text-decoration:none;font-size:18px;font-weight:800}
+body:has(#result:target) .top .nojs-note{display:block}
+body:has(#result:target) .top #score::after{content:"已交卷｜請查看下方結果";font-weight:800;color:#155a91}
+@media(max-width:600px){.result-page{padding:15px}.score-main{font-size:24px}.wrong-stem{font-size:17px}}
+body:has(#q1 input[value="1"]:checked) #wrong1{display:block}
+body:has(#q1 input[value="1"]:checked) #wrong1 .ya1{display:inline}
+body:has(#q1 input[value="2"]:checked) #wrong1{display:block}
+body:has(#q1 input[value="2"]:checked) #wrong1 .ya2{display:inline}
+body:has(#q1 input[value="3"]:checked) #wrong1{display:block}
+body:has(#q1 input[value="3"]:checked) #wrong1 .ya3{display:inline}
+body:not(:has(#q1 input:checked)) #wrong1{display:block}
+body:not(:has(#q1 input:checked)) #wrong1 .ya0{display:inline}
+body:has(#q2 input[value="1"]:checked) #wrong2{display:block}
+body:has(#q2 input[value="1"]:checked) #wrong2 .ya1{display:inline}
+body:has(#q2 input[value="3"]:checked) #wrong2{display:block}
+body:has(#q2 input[value="3"]:checked) #wrong2 .ya3{display:inline}
+body:has(#q2 input[value="4"]:checked) #wrong2{display:block}
+body:has(#q2 input[value="4"]:checked) #wrong2 .ya4{display:inline}
+body:not(:has(#q2 input:checked)) #wrong2{display:block}
+body:not(:has(#q2 input:checked)) #wrong2 .ya0{display:inline}
+body:has(#q3 input[value="1"]:checked) #wrong3{display:block}
+body:has(#q3 input[value="1"]:checked) #wrong3 .ya1{display:inline}
+body:has(#q3 input[value="2"]:checked) #wrong3{display:block}
+body:has(#q3 input[value="2"]:checked) #wrong3 .ya2{display:inline}
+body:has(#q3 input[value="3"]:checked) #wrong3{display:block}
+body:has(#q3 input[value="3"]:checked) #wrong3 .ya3{display:inline}
+body:not(:has(#q3 input:checked)) #wrong3{display:block}
+body:not(:has(#q3 input:checked)) #wrong3 .ya0{display:inline}
+body:has(#q4 input[value="1"]:checked) #wrong4{display:block}
+body:has(#q4 input[value="1"]:checked) #wrong4 .ya1{display:inline}
+body:has(#q4 input[value="2"]:checked) #wrong4{display:block}
+body:has(#q4 input[value="2"]:checked) #wrong4 .ya2{display:inline}
+body:has(#q4 input[value="3"]:checked) #wrong4{display:block}
+body:has(#q4 input[value="3"]:checked) #wrong4 .ya3{display:inline}
+body:not(:has(#q4 input:checked)) #wrong4{display:block}
+body:not(:has(#q4 input:checked)) #wrong4 .ya0{display:inline}
+body:has(#q5 input[value="1"]:checked) #wrong5{display:block}
+body:has(#q5 input[value="1"]:checked) #wrong5 .ya1{display:inline}
+body:has(#q5 input[value="2"]:checked) #wrong5{display:block}
+body:has(#q5 input[value="2"]:checked) #wrong5 .ya2{display:inline}
+body:has(#q5 input[value="3"]:checked) #wrong5{display:block}
+body:has(#q5 input[value="3"]:checked) #wrong5 .ya3{display:inline}
+body:not(:has(#q5 input:checked)) #wrong5{display:block}
+body:not(:has(#q5 input:checked)) #wrong5 .ya0{display:inline}
+body:has(#q6 input[value="1"]:checked) #wrong6{display:block}
+body:has(#q6 input[value="1"]:checked) #wrong6 .ya1{display:inline}
+body:has(#q6 input[value="2"]:checked) #wrong6{display:block}
+body:has(#q6 input[value="2"]:checked) #wrong6 .ya2{display:inline}
+body:has(#q6 input[value="3"]:checked) #wrong6{display:block}
+body:has(#q6 input[value="3"]:checked) #wrong6 .ya3{display:inline}
+body:not(:has(#q6 input:checked)) #wrong6{display:block}
+body:not(:has(#q6 input:checked)) #wrong6 .ya0{display:inline}
+body:has(#q7 input[value="2"]:checked) #wrong7{display:block}
+body:has(#q7 input[value="2"]:checked) #wrong7 .ya2{display:inline}
+body:has(#q7 input[value="3"]:checked) #wrong7{display:block}
+body:has(#q7 input[value="3"]:checked) #wrong7 .ya3{display:inline}
+body:has(#q7 input[value="4"]:checked) #wrong7{display:block}
+body:has(#q7 input[value="4"]:checked) #wrong7 .ya4{display:inline}
+body:not(:has(#q7 input:checked)) #wrong7{display:block}
+body:not(:has(#q7 input:checked)) #wrong7 .ya0{display:inline}
+body:has(#q8 input[value="1"]:checked) #wrong8{display:block}
+body:has(#q8 input[value="1"]:checked) #wrong8 .ya1{display:inline}
+body:has(#q8 input[value="2"]:checked) #wrong8{display:block}
+body:has(#q8 input[value="2"]:checked) #wrong8 .ya2{display:inline}
+body:has(#q8 input[value="3"]:checked) #wrong8{display:block}
+body:has(#q8 input[value="3"]:checked) #wrong8 .ya3{display:inline}
+body:not(:has(#q8 input:checked)) #wrong8{display:block}
+body:not(:has(#q8 input:checked)) #wrong8 .ya0{display:inline}
+body:has(#q9 input[value="1"]:checked) #wrong9{display:block}
+body:has(#q9 input[value="1"]:checked) #wrong9 .ya1{display:inline}
+body:has(#q9 input[value="2"]:checked) #wrong9{display:block}
+body:has(#q9 input[value="2"]:checked) #wrong9 .ya2{display:inline}
+body:has(#q9 input[value="4"]:checked) #wrong9{display:block}
+body:has(#q9 input[value="4"]:checked) #wrong9 .ya4{display:inline}
+body:not(:has(#q9 input:checked)) #wrong9{display:block}
+body:not(:has(#q9 input:checked)) #wrong9 .ya0{display:inline}
+body:has(#q10 input[value="1"]:checked) #wrong10{display:block}
+body:has(#q10 input[value="1"]:checked) #wrong10 .ya1{display:inline}
+body:has(#q10 input[value="2"]:checked) #wrong10{display:block}
+body:has(#q10 input[value="2"]:checked) #wrong10 .ya2{display:inline}
+body:has(#q10 input[value="3"]:checked) #wrong10{display:block}
+body:has(#q10 input[value="3"]:checked) #wrong10 .ya3{display:inline}
+body:not(:has(#q10 input:checked)) #wrong10{display:block}
+body:not(:has(#q10 input:checked)) #wrong10 .ya0{display:inline}
+body:has(#q11 input[value="1"]:checked) #wrong11{display:block}
+body:has(#q11 input[value="1"]:checked) #wrong11 .ya1{display:inline}
+body:has(#q11 input[value="3"]:checked) #wrong11{display:block}
+body:has(#q11 input[value="3"]:checked) #wrong11 .ya3{display:inline}
+body:has(#q11 input[value="4"]:checked) #wrong11{display:block}
+body:has(#q11 input[value="4"]:checked) #wrong11 .ya4{display:inline}
+body:not(:has(#q11 input:checked)) #wrong11{display:block}
+body:not(:has(#q11 input:checked)) #wrong11 .ya0{display:inline}
+body:has(#q12 input[value="2"]:checked) #wrong12{display:block}
+body:has(#q12 input[value="2"]:checked) #wrong12 .ya2{display:inline}
+body:has(#q12 input[value="3"]:checked) #wrong12{display:block}
+body:has(#q12 input[value="3"]:checked) #wrong12 .ya3{display:inline}
+body:has(#q12 input[value="4"]:checked) #wrong12{display:block}
+body:has(#q12 input[value="4"]:checked) #wrong12 .ya4{display:inline}
+body:not(:has(#q12 input:checked)) #wrong12{display:block}
+body:not(:has(#q12 input:checked)) #wrong12 .ya0{display:inline}
+body:has(#q13 input[value="2"]:checked) #wrong13{display:block}
+body:has(#q13 input[value="2"]:checked) #wrong13 .ya2{display:inline}
+body:has(#q13 input[value="3"]:checked) #wrong13{display:block}
+body:has(#q13 input[value="3"]:checked) #wrong13 .ya3{display:inline}
+body:has(#q13 input[value="4"]:checked) #wrong13{display:block}
+body:has(#q13 input[value="4"]:checked) #wrong13 .ya4{display:inline}
+body:not(:has(#q13 input:checked)) #wrong13{display:block}
+body:not(:has(#q13 input:checked)) #wrong13 .ya0{display:inline}
+body:has(#q14 input[value="1"]:checked) #wrong14{display:block}
+body:has(#q14 input[value="1"]:checked) #wrong14 .ya1{display:inline}
+body:has(#q14 input[value="2"]:checked) #wrong14{display:block}
+body:has(#q14 input[value="2"]:checked) #wrong14 .ya2{display:inline}
+body:has(#q14 input[value="3"]:checked) #wrong14{display:block}
+body:has(#q14 input[value="3"]:checked) #wrong14 .ya3{display:inline}
+body:not(:has(#q14 input:checked)) #wrong14{display:block}
+body:not(:has(#q14 input:checked)) #wrong14 .ya0{display:inline}
+body:has(#q15 input[value="1"]:checked) #wrong15{display:block}
+body:has(#q15 input[value="1"]:checked) #wrong15 .ya1{display:inline}
+body:has(#q15 input[value="2"]:checked) #wrong15{display:block}
+body:has(#q15 input[value="2"]:checked) #wrong15 .ya2{display:inline}
+body:has(#q15 input[value="3"]:checked) #wrong15{display:block}
+body:has(#q15 input[value="3"]:checked) #wrong15 .ya3{display:inline}
+body:not(:has(#q15 input:checked)) #wrong15{display:block}
+body:not(:has(#q15 input:checked)) #wrong15 .ya0{display:inline}
+body:has(#q16 input[value="1"]:checked) #wrong16{display:block}
+body:has(#q16 input[value="1"]:checked) #wrong16 .ya1{display:inline}
+body:has(#q16 input[value="2"]:checked) #wrong16{display:block}
+body:has(#q16 input[value="2"]:checked) #wrong16 .ya2{display:inline}
+body:has(#q16 input[value="4"]:checked) #wrong16{display:block}
+body:has(#q16 input[value="4"]:checked) #wrong16 .ya4{display:inline}
+body:not(:has(#q16 input:checked)) #wrong16{display:block}
+body:not(:has(#q16 input:checked)) #wrong16 .ya0{display:inline}
+body:has(#q17 input[value="2"]:checked) #wrong17{display:block}
+body:has(#q17 input[value="2"]:checked) #wrong17 .ya2{display:inline}
+body:has(#q17 input[value="3"]:checked) #wrong17{display:block}
+body:has(#q17 input[value="3"]:checked) #wrong17 .ya3{display:inline}
+body:has(#q17 input[value="4"]:checked) #wrong17{display:block}
+body:has(#q17 input[value="4"]:checked) #wrong17 .ya4{display:inline}
+body:not(:has(#q17 input:checked)) #wrong17{display:block}
+body:not(:has(#q17 input:checked)) #wrong17 .ya0{display:inline}
+body:has(#q18 input[value="2"]:checked) #wrong18{display:block}
+body:has(#q18 input[value="2"]:checked) #wrong18 .ya2{display:inline}
+body:has(#q18 input[value="3"]:checked) #wrong18{display:block}
+body:has(#q18 input[value="3"]:checked) #wrong18 .ya3{display:inline}
+body:has(#q18 input[value="4"]:checked) #wrong18{display:block}
+body:has(#q18 input[value="4"]:checked) #wrong18 .ya4{display:inline}
+body:not(:has(#q18 input:checked)) #wrong18{display:block}
+body:not(:has(#q18 input:checked)) #wrong18 .ya0{display:inline}
+body:has(#q19 input[value="1"]:checked) #wrong19{display:block}
+body:has(#q19 input[value="1"]:checked) #wrong19 .ya1{display:inline}
+body:has(#q19 input[value="2"]:checked) #wrong19{display:block}
+body:has(#q19 input[value="2"]:checked) #wrong19 .ya2{display:inline}
+body:has(#q19 input[value="3"]:checked) #wrong19{display:block}
+body:has(#q19 input[value="3"]:checked) #wrong19 .ya3{display:inline}
+body:not(:has(#q19 input:checked)) #wrong19{display:block}
+body:not(:has(#q19 input:checked)) #wrong19 .ya0{display:inline}
+body:has(#q20 input[value="1"]:checked) #wrong20{display:block}
+body:has(#q20 input[value="1"]:checked) #wrong20 .ya1{display:inline}
+body:has(#q20 input[value="3"]:checked) #wrong20{display:block}
+body:has(#q20 input[value="3"]:checked) #wrong20 .ya3{display:inline}
+body:has(#q20 input[value="4"]:checked) #wrong20{display:block}
+body:has(#q20 input[value="4"]:checked) #wrong20 .ya4{display:inline}
+body:not(:has(#q20 input:checked)) #wrong20{display:block}
+body:not(:has(#q20 input:checked)) #wrong20 .ya0{display:inline}
+body:has(#q21 input[value="1"]:checked) #wrong21{display:block}
+body:has(#q21 input[value="1"]:checked) #wrong21 .ya1{display:inline}
+body:has(#q21 input[value="2"]:checked) #wrong21{display:block}
+body:has(#q21 input[value="2"]:checked) #wrong21 .ya2{display:inline}
+body:has(#q21 input[value="4"]:checked) #wrong21{display:block}
+body:has(#q21 input[value="4"]:checked) #wrong21 .ya4{display:inline}
+body:not(:has(#q21 input:checked)) #wrong21{display:block}
+body:not(:has(#q21 input:checked)) #wrong21 .ya0{display:inline}
+body:has(#q22 input[value="2"]:checked) #wrong22{display:block}
+body:has(#q22 input[value="2"]:checked) #wrong22 .ya2{display:inline}
+body:has(#q22 input[value="3"]:checked) #wrong22{display:block}
+body:has(#q22 input[value="3"]:checked) #wrong22 .ya3{display:inline}
+body:has(#q22 input[value="4"]:checked) #wrong22{display:block}
+body:has(#q22 input[value="4"]:checked) #wrong22 .ya4{display:inline}
+body:not(:has(#q22 input:checked)) #wrong22{display:block}
+body:not(:has(#q22 input:checked)) #wrong22 .ya0{display:inline}
+body:has(#q23 input[value="1"]:checked) #wrong23{display:block}
+body:has(#q23 input[value="1"]:checked) #wrong23 .ya1{display:inline}
+body:has(#q23 input[value="2"]:checked) #wrong23{display:block}
+body:has(#q23 input[value="2"]:checked) #wrong23 .ya2{display:inline}
+body:has(#q23 input[value="4"]:checked) #wrong23{display:block}
+body:has(#q23 input[value="4"]:checked) #wrong23 .ya4{display:inline}
+body:not(:has(#q23 input:checked)) #wrong23{display:block}
+body:not(:has(#q23 input:checked)) #wrong23 .ya0{display:inline}
+body:has(#q24 input[value="1"]:checked) #wrong24{display:block}
+body:has(#q24 input[value="1"]:checked) #wrong24 .ya1{display:inline}
+body:has(#q24 input[value="3"]:checked) #wrong24{display:block}
+body:has(#q24 input[value="3"]:checked) #wrong24 .ya3{display:inline}
+body:has(#q24 input[value="4"]:checked) #wrong24{display:block}
+body:has(#q24 input[value="4"]:checked) #wrong24 .ya4{display:inline}
+body:not(:has(#q24 input:checked)) #wrong24{display:block}
+body:not(:has(#q24 input:checked)) #wrong24 .ya0{display:inline}
+body:has(#q25 input[value="1"]:checked) #wrong25{display:block}
+body:has(#q25 input[value="1"]:checked) #wrong25 .ya1{display:inline}
+body:has(#q25 input[value="3"]:checked) #wrong25{display:block}
+body:has(#q25 input[value="3"]:checked) #wrong25 .ya3{display:inline}
+body:has(#q25 input[value="4"]:checked) #wrong25{display:block}
+body:has(#q25 input[value="4"]:checked) #wrong25 .ya4{display:inline}
+body:not(:has(#q25 input:checked)) #wrong25{display:block}
+body:not(:has(#q25 input:checked)) #wrong25 .ya0{display:inline}
+body:has(#q26 input[value="1"]:checked) #wrong26{display:block}
+body:has(#q26 input[value="1"]:checked) #wrong26 .ya1{display:inline}
+body:has(#q26 input[value="2"]:checked) #wrong26{display:block}
+body:has(#q26 input[value="2"]:checked) #wrong26 .ya2{display:inline}
+body:has(#q26 input[value="4"]:checked) #wrong26{display:block}
+body:has(#q26 input[value="4"]:checked) #wrong26 .ya4{display:inline}
+body:not(:has(#q26 input:checked)) #wrong26{display:block}
+body:not(:has(#q26 input:checked)) #wrong26 .ya0{display:inline}
+body:has(#q27 input[value="1"]:checked) #wrong27{display:block}
+body:has(#q27 input[value="1"]:checked) #wrong27 .ya1{display:inline}
+body:has(#q27 input[value="2"]:checked) #wrong27{display:block}
+body:has(#q27 input[value="2"]:checked) #wrong27 .ya2{display:inline}
+body:has(#q27 input[value="4"]:checked) #wrong27{display:block}
+body:has(#q27 input[value="4"]:checked) #wrong27 .ya4{display:inline}
+body:not(:has(#q27 input:checked)) #wrong27{display:block}
+body:not(:has(#q27 input:checked)) #wrong27 .ya0{display:inline}
+body:has(#q28 input[value="1"]:checked) #wrong28{display:block}
+body:has(#q28 input[value="1"]:checked) #wrong28 .ya1{display:inline}
+body:has(#q28 input[value="3"]:checked) #wrong28{display:block}
+body:has(#q28 input[value="3"]:checked) #wrong28 .ya3{display:inline}
+body:has(#q28 input[value="4"]:checked) #wrong28{display:block}
+body:has(#q28 input[value="4"]:checked) #wrong28 .ya4{display:inline}
+body:not(:has(#q28 input:checked)) #wrong28{display:block}
+body:not(:has(#q28 input:checked)) #wrong28 .ya0{display:inline}
+body:has(#q29 input[value="2"]:checked) #wrong29{display:block}
+body:has(#q29 input[value="2"]:checked) #wrong29 .ya2{display:inline}
+body:has(#q29 input[value="3"]:checked) #wrong29{display:block}
+body:has(#q29 input[value="3"]:checked) #wrong29 .ya3{display:inline}
+body:has(#q29 input[value="4"]:checked) #wrong29{display:block}
+body:has(#q29 input[value="4"]:checked) #wrong29 .ya4{display:inline}
+body:not(:has(#q29 input:checked)) #wrong29{display:block}
+body:not(:has(#q29 input:checked)) #wrong29 .ya0{display:inline}
+body:has(#q30 input[value="1"]:checked) #wrong30{display:block}
+body:has(#q30 input[value="1"]:checked) #wrong30 .ya1{display:inline}
+body:has(#q30 input[value="3"]:checked) #wrong30{display:block}
+body:has(#q30 input[value="3"]:checked) #wrong30 .ya3{display:inline}
+body:has(#q30 input[value="4"]:checked) #wrong30{display:block}
+body:has(#q30 input[value="4"]:checked) #wrong30 .ya4{display:inline}
+body:not(:has(#q30 input:checked)) #wrong30{display:block}
+body:not(:has(#q30 input:checked)) #wrong30 .ya0{display:inline}
+body:has(#q31 input[value="1"]:checked) #wrong31{display:block}
+body:has(#q31 input[value="1"]:checked) #wrong31 .ya1{display:inline}
+body:has(#q31 input[value="2"]:checked) #wrong31{display:block}
+body:has(#q31 input[value="2"]:checked) #wrong31 .ya2{display:inline}
+body:has(#q31 input[value="4"]:checked) #wrong31{display:block}
+body:has(#q31 input[value="4"]:checked) #wrong31 .ya4{display:inline}
+body:not(:has(#q31 input:checked)) #wrong31{display:block}
+body:not(:has(#q31 input:checked)) #wrong31 .ya0{display:inline}
+body:has(#q32 input[value="1"]:checked) #wrong32{display:block}
+body:has(#q32 input[value="1"]:checked) #wrong32 .ya1{display:inline}
+body:has(#q32 input[value="2"]:checked) #wrong32{display:block}
+body:has(#q32 input[value="2"]:checked) #wrong32 .ya2{display:inline}
+body:has(#q32 input[value="4"]:checked) #wrong32{display:block}
+body:has(#q32 input[value="4"]:checked) #wrong32 .ya4{display:inline}
+body:not(:has(#q32 input:checked)) #wrong32{display:block}
+body:not(:has(#q32 input:checked)) #wrong32 .ya0{display:inline}
+body:has(#q33 input[value="1"]:checked) #wrong33{display:block}
+body:has(#q33 input[value="1"]:checked) #wrong33 .ya1{display:inline}
+body:has(#q33 input[value="3"]:checked) #wrong33{display:block}
+body:has(#q33 input[value="3"]:checked) #wrong33 .ya3{display:inline}
+body:has(#q33 input[value="4"]:checked) #wrong33{display:block}
+body:has(#q33 input[value="4"]:checked) #wrong33 .ya4{display:inline}
+body:not(:has(#q33 input:checked)) #wrong33{display:block}
+body:not(:has(#q33 input:checked)) #wrong33 .ya0{display:inline}
+body:has(#q34 input[value="1"]:checked) #wrong34{display:block}
+body:has(#q34 input[value="1"]:checked) #wrong34 .ya1{display:inline}
+body:has(#q34 input[value="3"]:checked) #wrong34{display:block}
+body:has(#q34 input[value="3"]:checked) #wrong34 .ya3{display:inline}
+body:has(#q34 input[value="4"]:checked) #wrong34{display:block}
+body:has(#q34 input[value="4"]:checked) #wrong34 .ya4{display:inline}
+body:not(:has(#q34 input:checked)) #wrong34{display:block}
+body:not(:has(#q34 input:checked)) #wrong34 .ya0{display:inline}
+body:has(#q35 input[value="1"]:checked) #wrong35{display:block}
+body:has(#q35 input[value="1"]:checked) #wrong35 .ya1{display:inline}
+body:has(#q35 input[value="2"]:checked) #wrong35{display:block}
+body:has(#q35 input[value="2"]:checked) #wrong35 .ya2{display:inline}
+body:has(#q35 input[value="4"]:checked) #wrong35{display:block}
+body:has(#q35 input[value="4"]:checked) #wrong35 .ya4{display:inline}
+body:not(:has(#q35 input:checked)) #wrong35{display:block}
+body:not(:has(#q35 input:checked)) #wrong35 .ya0{display:inline}
+body:has(#q36 input[value="1"]:checked) #wrong36{display:block}
+body:has(#q36 input[value="1"]:checked) #wrong36 .ya1{display:inline}
+body:has(#q36 input[value="3"]:checked) #wrong36{display:block}
+body:has(#q36 input[value="3"]:checked) #wrong36 .ya3{display:inline}
+body:has(#q36 input[value="4"]:checked) #wrong36{display:block}
+body:has(#q36 input[value="4"]:checked) #wrong36 .ya4{display:inline}
+body:not(:has(#q36 input:checked)) #wrong36{display:block}
+body:not(:has(#q36 input:checked)) #wrong36 .ya0{display:inline}
+body:has(#q37 input[value="1"]:checked) #wrong37{display:block}
+body:has(#q37 input[value="1"]:checked) #wrong37 .ya1{display:inline}
+body:has(#q37 input[value="3"]:checked) #wrong37{display:block}
+body:has(#q37 input[value="3"]:checked) #wrong37 .ya3{display:inline}
+body:has(#q37 input[value="4"]:checked) #wrong37{display:block}
+body:has(#q37 input[value="4"]:checked) #wrong37 .ya4{display:inline}
+body:not(:has(#q37 input:checked)) #wrong37{display:block}
+body:not(:has(#q37 input:checked)) #wrong37 .ya0{display:inline}
+body:has(#q38 input[value="2"]:checked) #wrong38{display:block}
+body:has(#q38 input[value="2"]:checked) #wrong38 .ya2{display:inline}
+body:has(#q38 input[value="3"]:checked) #wrong38{display:block}
+body:has(#q38 input[value="3"]:checked) #wrong38 .ya3{display:inline}
+body:has(#q38 input[value="4"]:checked) #wrong38{display:block}
+body:has(#q38 input[value="4"]:checked) #wrong38 .ya4{display:inline}
+body:not(:has(#q38 input:checked)) #wrong38{display:block}
+body:not(:has(#q38 input:checked)) #wrong38 .ya0{display:inline}
+body:has(#q39 input[value="1"]:checked) #wrong39{display:block}
+body:has(#q39 input[value="1"]:checked) #wrong39 .ya1{display:inline}
+body:has(#q39 input[value="3"]:checked) #wrong39{display:block}
+body:has(#q39 input[value="3"]:checked) #wrong39 .ya3{display:inline}
+body:has(#q39 input[value="4"]:checked) #wrong39{display:block}
+body:has(#q39 input[value="4"]:checked) #wrong39 .ya4{display:inline}
+body:not(:has(#q39 input:checked)) #wrong39{display:block}
+body:not(:has(#q39 input:checked)) #wrong39 .ya0{display:inline}
+body:has(#q40 input[value="1"]:checked) #wrong40{display:block}
+body:has(#q40 input[value="1"]:checked) #wrong40 .ya1{display:inline}
+body:has(#q40 input[value="2"]:checked) #wrong40{display:block}
+body:has(#q40 input[value="2"]:checked) #wrong40 .ya2{display:inline}
+body:has(#q40 input[value="4"]:checked) #wrong40{display:block}
+body:has(#q40 input[value="4"]:checked) #wrong40 .ya4{display:inline}
+body:not(:has(#q40 input:checked)) #wrong40{display:block}
+body:not(:has(#q40 input:checked)) #wrong40 .ya0{display:inline}
+body:has(#q41 input[value="1"]:checked) #wrong41{display:block}
+body:has(#q41 input[value="1"]:checked) #wrong41 .ya1{display:inline}
+body:has(#q41 input[value="2"]:checked) #wrong41{display:block}
+body:has(#q41 input[value="2"]:checked) #wrong41 .ya2{display:inline}
+body:has(#q41 input[value="4"]:checked) #wrong41{display:block}
+body:has(#q41 input[value="4"]:checked) #wrong41 .ya4{display:inline}
+body:not(:has(#q41 input:checked)) #wrong41{display:block}
+body:not(:has(#q41 input:checked)) #wrong41 .ya0{display:inline}
+body:has(#q42 input[value="1"]:checked) #wrong42{display:block}
+body:has(#q42 input[value="1"]:checked) #wrong42 .ya1{display:inline}
+body:has(#q42 input[value="2"]:checked) #wrong42{display:block}
+body:has(#q42 input[value="2"]:checked) #wrong42 .ya2{display:inline}
+body:has(#q42 input[value="4"]:checked) #wrong42{display:block}
+body:has(#q42 input[value="4"]:checked) #wrong42 .ya4{display:inline}
+body:not(:has(#q42 input:checked)) #wrong42{display:block}
+body:not(:has(#q42 input:checked)) #wrong42 .ya0{display:inline}
+body:has(#q43 input[value="1"]:checked) #wrong43{display:block}
+body:has(#q43 input[value="1"]:checked) #wrong43 .ya1{display:inline}
+body:has(#q43 input[value="2"]:checked) #wrong43{display:block}
+body:has(#q43 input[value="2"]:checked) #wrong43 .ya2{display:inline}
+body:has(#q43 input[value="4"]:checked) #wrong43{display:block}
+body:has(#q43 input[value="4"]:checked) #wrong43 .ya4{display:inline}
+body:not(:has(#q43 input:checked)) #wrong43{display:block}
+body:not(:has(#q43 input:checked)) #wrong43 .ya0{display:inline}
+body:has(#q44 input[value="1"]:checked) #wrong44{display:block}
+body:has(#q44 input[value="1"]:checked) #wrong44 .ya1{display:inline}
+body:has(#q44 input[value="3"]:checked) #wrong44{display:block}
+body:has(#q44 input[value="3"]:checked) #wrong44 .ya3{display:inline}
+body:has(#q44 input[value="4"]:checked) #wrong44{display:block}
+body:has(#q44 input[value="4"]:checked) #wrong44 .ya4{display:inline}
+body:not(:has(#q44 input:checked)) #wrong44{display:block}
+body:not(:has(#q44 input:checked)) #wrong44 .ya0{display:inline}
+body:has(#q45 input[value="1"]:checked) #wrong45{display:block}
+body:has(#q45 input[value="1"]:checked) #wrong45 .ya1{display:inline}
+body:has(#q45 input[value="2"]:checked) #wrong45{display:block}
+body:has(#q45 input[value="2"]:checked) #wrong45 .ya2{display:inline}
+body:has(#q45 input[value="3"]:checked) #wrong45{display:block}
+body:has(#q45 input[value="3"]:checked) #wrong45 .ya3{display:inline}
+body:not(:has(#q45 input:checked)) #wrong45{display:block}
+body:not(:has(#q45 input:checked)) #wrong45 .ya0{display:inline}
+body:has(#q46 input[value="2"]:checked) #wrong46{display:block}
+body:has(#q46 input[value="2"]:checked) #wrong46 .ya2{display:inline}
+body:has(#q46 input[value="3"]:checked) #wrong46{display:block}
+body:has(#q46 input[value="3"]:checked) #wrong46 .ya3{display:inline}
+body:has(#q46 input[value="4"]:checked) #wrong46{display:block}
+body:has(#q46 input[value="4"]:checked) #wrong46 .ya4{display:inline}
+body:not(:has(#q46 input:checked)) #wrong46{display:block}
+body:not(:has(#q46 input:checked)) #wrong46 .ya0{display:inline}
+body:has(#q47 input[value="1"]:checked) #wrong47{display:block}
+body:has(#q47 input[value="1"]:checked) #wrong47 .ya1{display:inline}
+body:has(#q47 input[value="2"]:checked) #wrong47{display:block}
+body:has(#q47 input[value="2"]:checked) #wrong47 .ya2{display:inline}
+body:has(#q47 input[value="3"]:checked) #wrong47{display:block}
+body:has(#q47 input[value="3"]:checked) #wrong47 .ya3{display:inline}
+body:not(:has(#q47 input:checked)) #wrong47{display:block}
+body:not(:has(#q47 input:checked)) #wrong47 .ya0{display:inline}
+body:has(#q48 input[value="2"]:checked) #wrong48{display:block}
+body:has(#q48 input[value="2"]:checked) #wrong48 .ya2{display:inline}
+body:has(#q48 input[value="3"]:checked) #wrong48{display:block}
+body:has(#q48 input[value="3"]:checked) #wrong48 .ya3{display:inline}
+body:has(#q48 input[value="4"]:checked) #wrong48{display:block}
+body:has(#q48 input[value="4"]:checked) #wrong48 .ya4{display:inline}
+body:not(:has(#q48 input:checked)) #wrong48{display:block}
+body:not(:has(#q48 input:checked)) #wrong48 .ya0{display:inline}
+body:has(#q49 input[value="2"]:checked) #wrong49{display:block}
+body:has(#q49 input[value="2"]:checked) #wrong49 .ya2{display:inline}
+body:has(#q49 input[value="3"]:checked) #wrong49{display:block}
+body:has(#q49 input[value="3"]:checked) #wrong49 .ya3{display:inline}
+body:has(#q49 input[value="4"]:checked) #wrong49{display:block}
+body:has(#q49 input[value="4"]:checked) #wrong49 .ya4{display:inline}
+body:not(:has(#q49 input:checked)) #wrong49{display:block}
+body:not(:has(#q49 input:checked)) #wrong49 .ya0{display:inline}
+body:has(#q50 input[value="1"]:checked) #wrong50{display:block}
+body:has(#q50 input[value="1"]:checked) #wrong50 .ya1{display:inline}
+body:has(#q50 input[value="2"]:checked) #wrong50{display:block}
+body:has(#q50 input[value="2"]:checked) #wrong50 .ya2{display:inline}
+body:has(#q50 input[value="3"]:checked) #wrong50{display:block}
+body:has(#q50 input[value="3"]:checked) #wrong50 .ya3{display:inline}
+body:not(:has(#q50 input:checked)) #wrong50{display:block}
+body:not(:has(#q50 input:checked)) #wrong50 .ya0{display:inline}
+body:has(#q51 input[value="1"]:checked) #wrong51{display:block}
+body:has(#q51 input[value="1"]:checked) #wrong51 .ya1{display:inline}
+body:has(#q51 input[value="3"]:checked) #wrong51{display:block}
+body:has(#q51 input[value="3"]:checked) #wrong51 .ya3{display:inline}
+body:has(#q51 input[value="4"]:checked) #wrong51{display:block}
+body:has(#q51 input[value="4"]:checked) #wrong51 .ya4{display:inline}
+body:not(:has(#q51 input:checked)) #wrong51{display:block}
+body:not(:has(#q51 input:checked)) #wrong51 .ya0{display:inline}
+body:has(#q52 input[value="2"]:checked) #wrong52{display:block}
+body:has(#q52 input[value="2"]:checked) #wrong52 .ya2{display:inline}
+body:has(#q52 input[value="3"]:checked) #wrong52{display:block}
+body:has(#q52 input[value="3"]:checked) #wrong52 .ya3{display:inline}
+body:has(#q52 input[value="4"]:checked) #wrong52{display:block}
+body:has(#q52 input[value="4"]:checked) #wrong52 .ya4{display:inline}
+body:not(:has(#q52 input:checked)) #wrong52{display:block}
+body:not(:has(#q52 input:checked)) #wrong52 .ya0{display:inline}
+body:has(#q53 input[value="1"]:checked) #wrong53{display:block}
+body:has(#q53 input[value="1"]:checked) #wrong53 .ya1{display:inline}
+body:has(#q53 input[value="2"]:checked) #wrong53{display:block}
+body:has(#q53 input[value="2"]:checked) #wrong53 .ya2{display:inline}
+body:has(#q53 input[value="3"]:checked) #wrong53{display:block}
+body:has(#q53 input[value="3"]:checked) #wrong53 .ya3{display:inline}
+body:not(:has(#q53 input:checked)) #wrong53{display:block}
+body:not(:has(#q53 input:checked)) #wrong53 .ya0{display:inline}
+body:has(#q54 input[value="1"]:checked) #wrong54{display:block}
+body:has(#q54 input[value="1"]:checked) #wrong54 .ya1{display:inline}
+body:has(#q54 input[value="2"]:checked) #wrong54{display:block}
+body:has(#q54 input[value="2"]:checked) #wrong54 .ya2{display:inline}
+body:has(#q54 input[value="3"]:checked) #wrong54{display:block}
+body:has(#q54 input[value="3"]:checked) #wrong54 .ya3{display:inline}
+body:not(:has(#q54 input:checked)) #wrong54{display:block}
+body:not(:has(#q54 input:checked)) #wrong54 .ya0{display:inline}
+body:has(#q55 input[value="2"]:checked) #wrong55{display:block}
+body:has(#q55 input[value="2"]:checked) #wrong55 .ya2{display:inline}
+body:has(#q55 input[value="3"]:checked) #wrong55{display:block}
+body:has(#q55 input[value="3"]:checked) #wrong55 .ya3{display:inline}
+body:has(#q55 input[value="4"]:checked) #wrong55{display:block}
+body:has(#q55 input[value="4"]:checked) #wrong55 .ya4{display:inline}
+body:not(:has(#q55 input:checked)) #wrong55{display:block}
+body:not(:has(#q55 input:checked)) #wrong55 .ya0{display:inline}
+body:has(#q56 input[value="1"]:checked) #wrong56{display:block}
+body:has(#q56 input[value="1"]:checked) #wrong56 .ya1{display:inline}
+body:has(#q56 input[value="3"]:checked) #wrong56{display:block}
+body:has(#q56 input[value="3"]:checked) #wrong56 .ya3{display:inline}
+body:has(#q56 input[value="4"]:checked) #wrong56{display:block}
+body:has(#q56 input[value="4"]:checked) #wrong56 .ya4{display:inline}
+body:not(:has(#q56 input:checked)) #wrong56{display:block}
+body:not(:has(#q56 input:checked)) #wrong56 .ya0{display:inline}
+body:has(#q57 input[value="2"]:checked) #wrong57{display:block}
+body:has(#q57 input[value="2"]:checked) #wrong57 .ya2{display:inline}
+body:has(#q57 input[value="3"]:checked) #wrong57{display:block}
+body:has(#q57 input[value="3"]:checked) #wrong57 .ya3{display:inline}
+body:has(#q57 input[value="4"]:checked) #wrong57{display:block}
+body:has(#q57 input[value="4"]:checked) #wrong57 .ya4{display:inline}
+body:not(:has(#q57 input:checked)) #wrong57{display:block}
+body:not(:has(#q57 input:checked)) #wrong57 .ya0{display:inline}
+body:has(#q58 input[value="1"]:checked) #wrong58{display:block}
+body:has(#q58 input[value="1"]:checked) #wrong58 .ya1{display:inline}
+body:has(#q58 input[value="2"]:checked) #wrong58{display:block}
+body:has(#q58 input[value="2"]:checked) #wrong58 .ya2{display:inline}
+body:has(#q58 input[value="3"]:checked) #wrong58{display:block}
+body:has(#q58 input[value="3"]:checked) #wrong58 .ya3{display:inline}
+body:not(:has(#q58 input:checked)) #wrong58{display:block}
+body:not(:has(#q58 input:checked)) #wrong58 .ya0{display:inline}
+body:has(#q59 input[value="2"]:checked) #wrong59{display:block}
+body:has(#q59 input[value="2"]:checked) #wrong59 .ya2{display:inline}
+body:has(#q59 input[value="3"]:checked) #wrong59{display:block}
+body:has(#q59 input[value="3"]:checked) #wrong59 .ya3{display:inline}
+body:has(#q59 input[value="4"]:checked) #wrong59{display:block}
+body:has(#q59 input[value="4"]:checked) #wrong59 .ya4{display:inline}
+body:not(:has(#q59 input:checked)) #wrong59{display:block}
+body:not(:has(#q59 input:checked)) #wrong59 .ya0{display:inline}
+body:has(#q60 input[value="1"]:checked) #wrong60{display:block}
+body:has(#q60 input[value="1"]:checked) #wrong60 .ya1{display:inline}
+body:has(#q60 input[value="2"]:checked) #wrong60{display:block}
+body:has(#q60 input[value="2"]:checked) #wrong60 .ya2{display:inline}
+body:has(#q60 input[value="3"]:checked) #wrong60{display:block}
+body:has(#q60 input[value="3"]:checked) #wrong60 .ya3{display:inline}
+body:not(:has(#q60 input:checked)) #wrong60{display:block}
+body:not(:has(#q60 input:checked)) #wrong60 .ya0{display:inline}
+body:has(#q61 input[value="2"]:checked) #wrong61{display:block}
+body:has(#q61 input[value="2"]:checked) #wrong61 .ya2{display:inline}
+body:has(#q61 input[value="3"]:checked) #wrong61{display:block}
+body:has(#q61 input[value="3"]:checked) #wrong61 .ya3{display:inline}
+body:has(#q61 input[value="4"]:checked) #wrong61{display:block}
+body:has(#q61 input[value="4"]:checked) #wrong61 .ya4{display:inline}
+body:not(:has(#q61 input:checked)) #wrong61{display:block}
+body:not(:has(#q61 input:checked)) #wrong61 .ya0{display:inline}
+body:has(#q62 input[value="1"]:checked) #wrong62{display:block}
+body:has(#q62 input[value="1"]:checked) #wrong62 .ya1{display:inline}
+body:has(#q62 input[value="2"]:checked) #wrong62{display:block}
+body:has(#q62 input[value="2"]:checked) #wrong62 .ya2{display:inline}
+body:has(#q62 input[value="4"]:checked) #wrong62{display:block}
+body:has(#q62 input[value="4"]:checked) #wrong62 .ya4{display:inline}
+body:not(:has(#q62 input:checked)) #wrong62{display:block}
+body:not(:has(#q62 input:checked)) #wrong62 .ya0{display:inline}
+body:has(#q63 input[value="1"]:checked) #wrong63{display:block}
+body:has(#q63 input[value="1"]:checked) #wrong63 .ya1{display:inline}
+body:has(#q63 input[value="2"]:checked) #wrong63{display:block}
+body:has(#q63 input[value="2"]:checked) #wrong63 .ya2{display:inline}
+body:has(#q63 input[value="4"]:checked) #wrong63{display:block}
+body:has(#q63 input[value="4"]:checked) #wrong63 .ya4{display:inline}
+body:not(:has(#q63 input:checked)) #wrong63{display:block}
+body:not(:has(#q63 input:checked)) #wrong63 .ya0{display:inline}
+body:has(#q64 input[value="1"]:checked) #wrong64{display:block}
+body:has(#q64 input[value="1"]:checked) #wrong64 .ya1{display:inline}
+body:has(#q64 input[value="2"]:checked) #wrong64{display:block}
+body:has(#q64 input[value="2"]:checked) #wrong64 .ya2{display:inline}
+body:has(#q64 input[value="4"]:checked) #wrong64{display:block}
+body:has(#q64 input[value="4"]:checked) #wrong64 .ya4{display:inline}
+body:not(:has(#q64 input:checked)) #wrong64{display:block}
+body:not(:has(#q64 input:checked)) #wrong64 .ya0{display:inline}
+body:has(#q65 input[value="2"]:checked) #wrong65{display:block}
+body:has(#q65 input[value="2"]:checked) #wrong65 .ya2{display:inline}
+body:has(#q65 input[value="3"]:checked) #wrong65{display:block}
+body:has(#q65 input[value="3"]:checked) #wrong65 .ya3{display:inline}
+body:has(#q65 input[value="4"]:checked) #wrong65{display:block}
+body:has(#q65 input[value="4"]:checked) #wrong65 .ya4{display:inline}
+body:not(:has(#q65 input:checked)) #wrong65{display:block}
+body:not(:has(#q65 input:checked)) #wrong65 .ya0{display:inline}
+body:has(#q66 input[value="1"]:checked) #wrong66{display:block}
+body:has(#q66 input[value="1"]:checked) #wrong66 .ya1{display:inline}
+body:has(#q66 input[value="2"]:checked) #wrong66{display:block}
+body:has(#q66 input[value="2"]:checked) #wrong66 .ya2{display:inline}
+body:has(#q66 input[value="4"]:checked) #wrong66{display:block}
+body:has(#q66 input[value="4"]:checked) #wrong66 .ya4{display:inline}
+body:not(:has(#q66 input:checked)) #wrong66{display:block}
+body:not(:has(#q66 input:checked)) #wrong66 .ya0{display:inline}
+body:has(#q67 input[value="2"]:checked) #wrong67{display:block}
+body:has(#q67 input[value="2"]:checked) #wrong67 .ya2{display:inline}
+body:has(#q67 input[value="3"]:checked) #wrong67{display:block}
+body:has(#q67 input[value="3"]:checked) #wrong67 .ya3{display:inline}
+body:has(#q67 input[value="4"]:checked) #wrong67{display:block}
+body:has(#q67 input[value="4"]:checked) #wrong67 .ya4{display:inline}
+body:not(:has(#q67 input:checked)) #wrong67{display:block}
+body:not(:has(#q67 input:checked)) #wrong67 .ya0{display:inline}
+body:has(#q68 input[value="2"]:checked) #wrong68{display:block}
+body:has(#q68 input[value="2"]:checked) #wrong68 .ya2{display:inline}
+body:has(#q68 input[value="3"]:checked) #wrong68{display:block}
+body:has(#q68 input[value="3"]:checked) #wrong68 .ya3{display:inline}
+body:has(#q68 input[value="4"]:checked) #wrong68{display:block}
+body:has(#q68 input[value="4"]:checked) #wrong68 .ya4{display:inline}
+body:not(:has(#q68 input:checked)) #wrong68{display:block}
+body:not(:has(#q68 input:checked)) #wrong68 .ya0{display:inline}
+body:has(#q69 input[value="1"]:checked) #wrong69{display:block}
+body:has(#q69 input[value="1"]:checked) #wrong69 .ya1{display:inline}
+body:has(#q69 input[value="3"]:checked) #wrong69{display:block}
+body:has(#q69 input[value="3"]:checked) #wrong69 .ya3{display:inline}
+body:has(#q69 input[value="4"]:checked) #wrong69{display:block}
+body:has(#q69 input[value="4"]:checked) #wrong69 .ya4{display:inline}
+body:not(:has(#q69 input:checked)) #wrong69{display:block}
+body:not(:has(#q69 input:checked)) #wrong69 .ya0{display:inline}
+body:has(#q70 input[value="1"]:checked) #wrong70{display:block}
+body:has(#q70 input[value="1"]:checked) #wrong70 .ya1{display:inline}
+body:has(#q70 input[value="2"]:checked) #wrong70{display:block}
+body:has(#q70 input[value="2"]:checked) #wrong70 .ya2{display:inline}
+body:has(#q70 input[value="4"]:checked) #wrong70{display:block}
+body:has(#q70 input[value="4"]:checked) #wrong70 .ya4{display:inline}
+body:not(:has(#q70 input:checked)) #wrong70{display:block}
+body:not(:has(#q70 input:checked)) #wrong70 .ya0{display:inline}
+body:has(#q71 input[value="1"]:checked) #wrong71{display:block}
+body:has(#q71 input[value="1"]:checked) #wrong71 .ya1{display:inline}
+body:has(#q71 input[value="2"]:checked) #wrong71{display:block}
+body:has(#q71 input[value="2"]:checked) #wrong71 .ya2{display:inline}
+body:has(#q71 input[value="4"]:checked) #wrong71{display:block}
+body:has(#q71 input[value="4"]:checked) #wrong71 .ya4{display:inline}
+body:not(:has(#q71 input:checked)) #wrong71{display:block}
+body:not(:has(#q71 input:checked)) #wrong71 .ya0{display:inline}
+body:has(#q72 input[value="1"]:checked) #wrong72{display:block}
+body:has(#q72 input[value="1"]:checked) #wrong72 .ya1{display:inline}
+body:has(#q72 input[value="2"]:checked) #wrong72{display:block}
+body:has(#q72 input[value="2"]:checked) #wrong72 .ya2{display:inline}
+body:has(#q72 input[value="3"]:checked) #wrong72{display:block}
+body:has(#q72 input[value="3"]:checked) #wrong72 .ya3{display:inline}
+body:not(:has(#q72 input:checked)) #wrong72{display:block}
+body:not(:has(#q72 input:checked)) #wrong72 .ya0{display:inline}
+body:has(#q73 input[value="1"]:checked) #wrong73{display:block}
+body:has(#q73 input[value="1"]:checked) #wrong73 .ya1{display:inline}
+body:has(#q73 input[value="2"]:checked) #wrong73{display:block}
+body:has(#q73 input[value="2"]:checked) #wrong73 .ya2{display:inline}
+body:has(#q73 input[value="3"]:checked) #wrong73{display:block}
+body:has(#q73 input[value="3"]:checked) #wrong73 .ya3{display:inline}
+body:not(:has(#q73 input:checked)) #wrong73{display:block}
+body:not(:has(#q73 input:checked)) #wrong73 .ya0{display:inline}
+body:has(#q74 input[value="2"]:checked) #wrong74{display:block}
+body:has(#q74 input[value="2"]:checked) #wrong74 .ya2{display:inline}
+body:has(#q74 input[value="3"]:checked) #wrong74{display:block}
+body:has(#q74 input[value="3"]:checked) #wrong74 .ya3{display:inline}
+body:has(#q74 input[value="4"]:checked) #wrong74{display:block}
+body:has(#q74 input[value="4"]:checked) #wrong74 .ya4{display:inline}
+body:not(:has(#q74 input:checked)) #wrong74{display:block}
+body:not(:has(#q74 input:checked)) #wrong74 .ya0{display:inline}
+body:has(#q75 input[value="2"]:checked) #wrong75{display:block}
+body:has(#q75 input[value="2"]:checked) #wrong75 .ya2{display:inline}
+body:has(#q75 input[value="3"]:checked) #wrong75{display:block}
+body:has(#q75 input[value="3"]:checked) #wrong75 .ya3{display:inline}
+body:has(#q75 input[value="4"]:checked) #wrong75{display:block}
+body:has(#q75 input[value="4"]:checked) #wrong75 .ya4{display:inline}
+body:not(:has(#q75 input:checked)) #wrong75{display:block}
+body:not(:has(#q75 input:checked)) #wrong75 .ya0{display:inline}
+body:has(#q76 input[value="1"]:checked) #wrong76{display:block}
+body:has(#q76 input[value="1"]:checked) #wrong76 .ya1{display:inline}
+body:has(#q76 input[value="2"]:checked) #wrong76{display:block}
+body:has(#q76 input[value="2"]:checked) #wrong76 .ya2{display:inline}
+body:has(#q76 input[value="4"]:checked) #wrong76{display:block}
+body:has(#q76 input[value="4"]:checked) #wrong76 .ya4{display:inline}
+body:not(:has(#q76 input:checked)) #wrong76{display:block}
+body:not(:has(#q76 input:checked)) #wrong76 .ya0{display:inline}
+body:has(#q77 input[value="1"]:checked) #wrong77{display:block}
+body:has(#q77 input[value="1"]:checked) #wrong77 .ya1{display:inline}
+body:has(#q77 input[value="2"]:checked) #wrong77{display:block}
+body:has(#q77 input[value="2"]:checked) #wrong77 .ya2{display:inline}
+body:has(#q77 input[value="3"]:checked) #wrong77{display:block}
+body:has(#q77 input[value="3"]:checked) #wrong77 .ya3{display:inline}
+body:not(:has(#q77 input:checked)) #wrong77{display:block}
+body:not(:has(#q77 input:checked)) #wrong77 .ya0{display:inline}
+body:has(#q78 input[value="1"]:checked) #wrong78{display:block}
+body:has(#q78 input[value="1"]:checked) #wrong78 .ya1{display:inline}
+body:has(#q78 input[value="3"]:checked) #wrong78{display:block}
+body:has(#q78 input[value="3"]:checked) #wrong78 .ya3{display:inline}
+body:has(#q78 input[value="4"]:checked) #wrong78{display:block}
+body:has(#q78 input[value="4"]:checked) #wrong78 .ya4{display:inline}
+body:not(:has(#q78 input:checked)) #wrong78{display:block}
+body:not(:has(#q78 input:checked)) #wrong78 .ya0{display:inline}
+body:has(#q79 input[value="1"]:checked) #wrong79{display:block}
+body:has(#q79 input[value="1"]:checked) #wrong79 .ya1{display:inline}
+body:has(#q79 input[value="2"]:checked) #wrong79{display:block}
+body:has(#q79 input[value="2"]:checked) #wrong79 .ya2{display:inline}
+body:has(#q79 input[value="4"]:checked) #wrong79{display:block}
+body:has(#q79 input[value="4"]:checked) #wrong79 .ya4{display:inline}
+body:not(:has(#q79 input:checked)) #wrong79{display:block}
+body:not(:has(#q79 input:checked)) #wrong79 .ya0{display:inline}
+body:has(#q80 input[value="1"]:checked) #wrong80{display:block}
+body:has(#q80 input[value="1"]:checked) #wrong80 .ya1{display:inline}
+body:has(#q80 input[value="2"]:checked) #wrong80{display:block}
+body:has(#q80 input[value="2"]:checked) #wrong80 .ya2{display:inline}
+body:has(#q80 input[value="4"]:checked) #wrong80{display:block}
+body:has(#q80 input[value="4"]:checked) #wrong80 .ya4{display:inline}
+body:not(:has(#q80 input:checked)) #wrong80{display:block}
+body:not(:has(#q80 input:checked)) #wrong80 .ya0{display:inline}</style></head><body><div class="wrap"><div class="top"><h1>建築製圖丙級｜80 題測驗</h1><div class="sub">固定 80 題：專業 64 題＋共同科目 1～4 各 4 題。iPad 本機相容版：一題一頁，最後交卷顯示分數與錯題。</div><div class="nojs-note">作答完成第 80 題後，請按「交卷並計分」。結果頁會顯示總分、答對題數，以及答錯／未作答題目。</div><div id="score"></div>
+<div class="progress-wrap"><div class="progress-text"><span id="counter">第 1 / 80 題</span><span id="answered">已作答 0 / 80</span></div><div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div><div class="jump"><select aria-label="跳至題目" id="jumpSelect"></select></div></div></div>
+<section class="q" data-answer="4" id="q1">
+<div class="meta">第 1 題　專業科目｜基本圖學｜原題第 42 題</div>
+<div class="stem">如果僅用一塊60°直角三角板與平行尺，最多可將一圓分為</div>
+<div class="opts"><label class="opt"><input name="q1" type="radio" value="1"/><span><b>1.</b> 3</span></label><label class="opt"><input name="q1" type="radio" value="2"/><span><b>2.</b> 6</span></label><label class="opt"><input name="q1" type="radio" value="3"/><span><b>3.</b> 9</span></label><label class="opt"><input class="correct" name="q1" type="radio" value="4"/><span><b>4.</b> 12 等分</span></label></div>
+<div class="fb" id="fb1"></div><div class="qnav-fallback"><a class="secondary disabled" href="#q1">上一題</a><a href="#q2">下一題</a></div>
+</section><section class="q" data-answer="2" id="q2">
+<div class="meta">第 2 題　專業科目｜識圖｜原題第 61 題</div>
+<div class="stem">非供公眾使用之7 層建築物，其防空避難室應大於</div>
+<div class="opts"><label class="opt"><input name="q2" type="radio" value="1"/><span><b>1.</b> 最大層樓地板面積</span></label><label class="opt"><input class="correct" name="q2" type="radio" value="2"/><span><b>2.</b> 建築面積</span></label><label class="opt"><input name="q2" type="radio" value="3"/><span><b>3.</b> 總樓地板面積</span></label><label class="opt"><input name="q2" type="radio" value="4"/><span><b>4.</b> 地面層樓 地板面積 之1/3</span></label></div>
+<div class="fb" id="fb2"></div><div class="qnav-fallback"><a class="secondary" href="#q1">上一題</a><a href="#q3">下一題</a></div>
+</section><section class="q" data-answer="4" id="q3">
+<div class="meta">第 3 題　共同科目4｜節能減碳｜原題第 25 題</div>
+<div class="stem">依據台灣電力公司三段式時間電價（尖峰、半尖峰及離峰時段）的規定， 哪個時段電價最便宜？</div>
+<div class="opts"><label class="opt"><input name="q3" type="radio" value="1"/><span><b>1.</b> 尖峰時段</span></label><label class="opt"><input name="q3" type="radio" value="2"/><span><b>2.</b> 夏月半尖峰時段</span></label><label class="opt"><input name="q3" type="radio" value="3"/><span><b>3.</b> 非夏月半尖峰時 段</span></label><label class="opt"><input class="correct" name="q3" type="radio" value="4"/><span><b>4.</b> 離峰時段</span></label></div>
+<div class="fb" id="fb3"></div><div class="qnav-fallback"><a class="secondary" href="#q2">上一題</a><a href="#q4">下一題</a></div>
+</section><section class="q" data-answer="4" id="q4">
+<div class="meta">第 4 題　專業科目｜繪製圖樣｜原題第 48 題</div>
+<div class="stem">樓梯間防火安全門以安裝下列那一種門鎖最為理想？</div>
+<div class="opts"><label class="opt"><input name="q4" type="radio" value="1"/><span><b>1.</b> 喇叭鎖</span></label><label class="opt"><input name="q4" type="radio" value="2"/><span><b>2.</b> 扳手鎖</span></label><label class="opt"><input name="q4" type="radio" value="3"/><span><b>3.</b> 彈簧鎖</span></label><label class="opt"><input class="correct" name="q4" type="radio" value="4"/><span><b>4.</b> 推桿或壓桿式門鎖</span></label></div>
+<div class="fb" id="fb4"></div><div class="qnav-fallback"><a class="secondary" href="#q3">上一題</a><a href="#q5">下一題</a></div>
+</section><section class="q" data-answer="4" id="q5">
+<div class="meta">第 5 題　共同科目1｜職業安全衛生｜原題第 77 題</div>
+<div class="stem">依勞動檢查法施行細則規定，事業單位如不服勞動檢查結果，應於勞動檢 查結果通知書送達之次日起10 日內，以書面敘明理由向勞動檢查機構提 出？</div>
+<div class="opts"><label class="opt"><input name="q5" type="radio" value="1"/><span><b>1.</b> 申訴</span></label><label class="opt"><input name="q5" type="radio" value="2"/><span><b>2.</b> 陳情</span></label><label class="opt"><input name="q5" type="radio" value="3"/><span><b>3.</b> 抗議</span></label><label class="opt"><input class="correct" name="q5" type="radio" value="4"/><span><b>4.</b> 異議</span></label></div>
+<div class="fb" id="fb5"></div><div class="qnav-fallback"><a class="secondary" href="#q4">上一題</a><a href="#q6">下一題</a></div>
+</section><section class="q" data-answer="4" id="q6">
+<div class="meta">第 6 題　專業科目｜基本工作｜原題第 5 題</div>
+<div class="stem">在AutoCAD 中，SNAP 的開啟或關閉，可以用功能鍵</div>
+<div class="opts"><label class="opt"><input name="q6" type="radio" value="1"/><span><b>1.</b> F6</span></label><label class="opt"><input name="q6" type="radio" value="2"/><span><b>2.</b> F7</span></label><label class="opt"><input name="q6" type="radio" value="3"/><span><b>3.</b> F8</span></label><label class="opt"><input class="correct" name="q6" type="radio" value="4"/><span><b>4.</b> F9 控制</span></label></div>
+<div class="fb" id="fb6"></div><div class="qnav-fallback"><a class="secondary" href="#q5">上一題</a><a href="#q7">下一題</a></div>
+</section><section class="q" data-answer="1" id="q7">
+<div class="meta">第 7 題　專業科目｜繪製圖樣｜原題第 121 題</div>
+<div class="stem">一般住宅樓梯及平台最小淨寬為</div>
+<div class="opts"><label class="opt"><input class="correct" name="q7" type="radio" value="1"/><span><b>1.</b> 75cm 以上</span></label><label class="opt"><input name="q7" type="radio" value="2"/><span><b>2.</b> 60cm 以上</span></label><label class="opt"><input name="q7" type="radio" value="3"/><span><b>3.</b> 80cm 以上</span></label><label class="opt"><input name="q7" type="radio" value="4"/><span><b>4.</b> 90cm 以上</span></label></div>
+<div class="fb" id="fb7"></div><div class="qnav-fallback"><a class="secondary" href="#q6">上一題</a><a href="#q8">下一題</a></div>
+</section><section class="q" data-answer="4" id="q8">
+<div class="meta">第 8 題　專業科目｜基本圖學｜原題第 31 題</div>
+<div class="stem">可調整角度三角板，其主要用途是</div>
+<div class="opts"><label class="opt"><input name="q8" type="radio" value="1"/><span><b>1.</b> 畫垂直線</span></label><label class="opt"><input name="q8" type="radio" value="2"/><span><b>2.</b> 畫平行線</span></label><label class="opt"><input name="q8" type="radio" value="3"/><span><b>3.</b> 畫曲線</span></label><label class="opt"><input class="correct" name="q8" type="radio" value="4"/><span><b>4.</b> 畫任何角度之斜線</span></label></div>
+<div class="fb" id="fb8"></div><div class="qnav-fallback"><a class="secondary" href="#q7">上一題</a><a href="#q9">下一題</a></div>
+</section><section class="q" data-answer="3" id="q9">
+<div class="meta">第 9 題　專業科目｜基本工作｜原題第 23 題</div>
+<div class="stem">BIOS 是指</div>
+<div class="opts"><label class="opt"><input name="q9" type="radio" value="1"/><span><b>1.</b> 位元指令</span></label><label class="opt"><input name="q9" type="radio" value="2"/><span><b>2.</b> 位元片微處理機</span></label><label class="opt"><input class="correct" name="q9" type="radio" value="3"/><span><b>3.</b> 輸入輸出系統</span></label><label class="opt"><input name="q9" type="radio" value="4"/><span><b>4.</b> 布林運算</span></label></div>
+<div class="fb" id="fb9"></div><div class="qnav-fallback"><a class="secondary" href="#q8">上一題</a><a href="#q10">下一題</a></div>
+</section><section class="q" data-answer="4" id="q10">
+<div class="meta">第 10 題　專業科目｜識圖｜原題第 25 題</div>
+<div class="stem">建築執照申請圖上著深綠色之線條" "，深綠色線是表示</div><div class="visual"><img alt="題目圖示" src="data:image/webp;base64,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"/></div>
+<div class="opts"><label class="opt"><input name="q10" type="radio" value="1"/><span><b>1.</b> 建築線</span></label><label class="opt"><input name="q10" type="radio" value="2"/><span><b>2.</b> 污水管線</span></label><label class="opt"><input name="q10" type="radio" value="3"/><span><b>3.</b> 地 平線</span></label><label class="opt"><input class="correct" name="q10" type="radio" value="4"/><span><b>4.</b> 地界線</span></label></div>
+<div class="fb" id="fb10"></div><div class="qnav-fallback"><a class="secondary" href="#q9">上一題</a><a href="#q11">下一題</a></div>
+</section><section class="q" data-answer="2" id="q11">
+<div class="meta">第 11 題　專業科目｜基本工作｜原題第 86 題</div>
+<div class="stem">在網際網路中，下列何種為與人溝通的基本橋樑？</div>
+<div class="opts"><label class="opt"><input name="q11" type="radio" value="1"/><span><b>1.</b> 暱稱</span></label><label class="opt"><input class="correct" name="q11" type="radio" value="2"/><span><b>2.</b> 網址</span></label><label class="opt"><input name="q11" type="radio" value="3"/><span><b>3.</b> 電話</span></label><label class="opt"><input name="q11" type="radio" value="4"/><span><b>4.</b> 年齡</span></label></div>
+<div class="fb" id="fb11"></div><div class="qnav-fallback"><a class="secondary" href="#q10">上一題</a><a href="#q12">下一題</a></div>
+</section><section class="q" data-answer="1" id="q12">
+<div class="meta">第 12 題　共同科目3｜環境保護｜原題第 7 題</div>
+<div class="stem">外食自備餐具是落實綠色消費的哪一項表現？</div>
+<div class="opts"><label class="opt"><input class="correct" name="q12" type="radio" value="1"/><span><b>1.</b> 重複使用</span></label><label class="opt"><input name="q12" type="radio" value="2"/><span><b>2.</b> 回收再生</span></label><label class="opt"><input name="q12" type="radio" value="3"/><span><b>3.</b> 環保選購</span></label><label class="opt"><input name="q12" type="radio" value="4"/><span><b>4.</b> 降低成本</span></label></div>
+<div class="fb" id="fb12"></div><div class="qnav-fallback"><a class="secondary" href="#q11">上一題</a><a href="#q13">下一題</a></div>
+</section><section class="q" data-answer="1" id="q13">
+<div class="meta">第 13 題　專業科目｜識圖｜原題第 126 題</div>
+<div class="stem">一般所謂輕型鋼係指厚度在</div>
+<div class="opts"><label class="opt"><input class="correct" name="q13" type="radio" value="1"/><span><b>1.</b> 4 ㎜</span></label><label class="opt"><input name="q13" type="radio" value="2"/><span><b>2.</b> 8 ㎜</span></label><label class="opt"><input name="q13" type="radio" value="3"/><span><b>3.</b> 10 ㎜</span></label><label class="opt"><input name="q13" type="radio" value="4"/><span><b>4.</b> 12 ㎜ 以下者</span></label></div>
+<div class="fb" id="fb13"></div><div class="qnav-fallback"><a class="secondary" href="#q12">上一題</a><a href="#q14">下一題</a></div>
+</section><section class="q" data-answer="4" id="q14">
+<div class="meta">第 14 題　專業科目｜繪製圖樣｜原題第 126 題</div>
+<div class="stem">一般公寓住宅掛牆式瓦斯熱水器最適合安置於</div>
+<div class="opts"><label class="opt"><input name="q14" type="radio" value="1"/><span><b>1.</b> 浴廁內</span></label><label class="opt"><input name="q14" type="radio" value="2"/><span><b>2.</b> 浴廁門口</span></label><label class="opt"><input name="q14" type="radio" value="3"/><span><b>3.</b> 廚房</span></label><label class="opt"><input class="correct" name="q14" type="radio" value="4"/><span><b>4.</b> 室外</span></label></div>
+<div class="fb" id="fb14"></div><div class="qnav-fallback"><a class="secondary" href="#q13">上一題</a><a href="#q15">下一題</a></div>
+</section><section class="q" data-answer="4" id="q15">
+<div class="meta">第 15 題　專業科目｜基本圖學｜原題第 11 題</div>
+<div class="stem">依CNS 規定，製圖用紙A1 圖紙的尺寸規格為</div>
+<div class="opts"><label class="opt"><input name="q15" type="radio" value="1"/><span><b>1.</b> 210×297 ㎜</span></label><label class="opt"><input name="q15" type="radio" value="2"/><span><b>2.</b> 297×420 ㎜</span></label><label class="opt"><input name="q15" type="radio" value="3"/><span><b>3.</b> 420×594 ㎜</span></label><label class="opt"><input class="correct" name="q15" type="radio" value="4"/><span><b>4.</b> 594×841 ㎜</span></label></div>
+<div class="fb" id="fb15"></div><div class="qnav-fallback"><a class="secondary" href="#q14">上一題</a><a href="#q16">下一題</a></div>
+</section><section class="q" data-answer="3" id="q16">
+<div class="meta">第 16 題　共同科目2｜工作倫理與職業道德｜原題第 92 題</div>
+<div class="stem">根據性別平等工作法規範職場性騷擾範疇，下列何者錯誤？</div>
+<div class="opts"><label class="opt"><input name="q16" type="radio" value="1"/><span><b>1.</b> 上班執行職 務時，任何人以性要求、具有性意味或性別歧視之言詞或行為，造成敵意 性、脅迫性或冒犯性之工作環境</span></label><label class="opt"><input name="q16" type="radio" value="2"/><span><b>2.</b> 對僱用、求職或執行職務關係受自己指 揮、監督之人，利用權勢或機會為性騷擾</span></label><label class="opt"><input class="correct" name="q16" type="radio" value="3"/><span><b>3.</b> 與朋友聚餐後回家時，被陌生 人以盯梢、守候、尾隨跟蹤</span></label><label class="opt"><input name="q16" type="radio" value="4"/><span><b>4.</b> 雇主對受僱者或求職者為明示或暗示之性要 求、具有性意味或性別歧視之言詞或行為</span></label></div>
+<div class="fb" id="fb16"></div><div class="qnav-fallback"><a class="secondary" href="#q15">上一題</a><a href="#q17">下一題</a></div>
+</section><section class="q" data-answer="1" id="q17">
+<div class="meta">第 17 題　專業科目｜識圖｜原題第 38 題</div>
+<div class="stem">建築工程中使用的1:3:6 混凝土，強度約為</div>
+<div class="opts"><label class="opt"><input class="correct" name="q17" type="radio" value="1"/><span><b>1.</b> 2000psi</span></label><label class="opt"><input name="q17" type="radio" value="2"/><span><b>2.</b> 2500psi</span></label><label class="opt"><input name="q17" type="radio" value="3"/><span><b>3.</b> 3000psi</span></label><label class="opt"><input name="q17" type="radio" value="4"/><span><b>4.</b> 4000psi</span></label></div>
+<div class="fb" id="fb17"></div><div class="qnav-fallback"><a class="secondary" href="#q16">上一題</a><a href="#q18">下一題</a></div>
+</section><section class="q" data-answer="1" id="q18">
+<div class="meta">第 18 題　專業科目｜繪製圖樣｜原題第 102 題</div>
+<div class="stem">公司可否在週六下午播放二輪國片給員工免費觀賞作為員工福利﹖</div>
+<div class="opts"><label class="opt"><input class="correct" name="q18" type="radio" value="1"/><span><b>1.</b> 可以，但要付錢給該國片的權利人</span></label><label class="opt"><input name="q18" type="radio" value="2"/><span><b>2.</b> 可 以，但要付錢給著作權委員會</span></label><label class="opt"><input name="q18" type="radio" value="3"/><span><b>3.</b> 可以，且不必付錢</span></label><label class="opt"><input name="q18" type="radio" value="4"/><span><b>4.</b> 不可以</span></label></div>
+<div class="fb" id="fb18"></div><div class="qnav-fallback"><a class="secondary" href="#q17">上一題</a><a href="#q19">下一題</a></div>
+</section><section class="q" data-answer="4" id="q19">
+<div class="meta">第 19 題　專業科目｜識圖｜原題第 95 題</div>
+<div class="stem">一般RC 樓版的鋼筋保護層約為</div>
+<div class="opts"><label class="opt"><input name="q19" type="radio" value="1"/><span><b>1.</b> 5 公分</span></label><label class="opt"><input name="q19" type="radio" value="2"/><span><b>2.</b> 4 公分</span></label><label class="opt"><input name="q19" type="radio" value="3"/><span><b>3.</b> 3 公分</span></label><label class="opt"><input class="correct" name="q19" type="radio" value="4"/><span><b>4.</b> 2 公分</span></label></div>
+<div class="fb" id="fb19"></div><div class="qnav-fallback"><a class="secondary" href="#q18">上一題</a><a href="#q20">下一題</a></div>
+</section><section class="q" data-answer="2" id="q20">
+<div class="meta">第 20 題　專業科目｜識圖｜原題第 97 題</div>
+<div class="stem">根據法規規定，磚造建築物的簷高不得超過</div>
+<div class="opts"><label class="opt"><input name="q20" type="radio" value="1"/><span><b>1.</b> 6 公尺</span></label><label class="opt"><input class="correct" name="q20" type="radio" value="2"/><span><b>2.</b> 7 公尺</span></label><label class="opt"><input name="q20" type="radio" value="3"/><span><b>3.</b> 9 公尺</span></label><label class="opt"><input name="q20" type="radio" value="4"/><span><b>4.</b> 12 公尺</span></label></div>
+<div class="fb" id="fb20"></div><div class="qnav-fallback"><a class="secondary" href="#q19">上一題</a><a href="#q21">下一題</a></div>
+</section><section class="q" data-answer="3" id="q21">
+<div class="meta">第 21 題　專業科目｜基本工作｜原題第 17 題</div>
+<div class="stem">有關BIOS 的敘述，下面何者是錯誤的？</div>
+<div class="opts"><label class="opt"><input name="q21" type="radio" value="1"/><span><b>1.</b> BIOS 是控制電腦輸出輸入的系統</span></label><label class="opt"><input name="q21" type="radio" value="2"/><span><b>2.</b> BIOS 是一顆ROM，其內含有控 制軟體</span></label><label class="opt"><input class="correct" name="q21" type="radio" value="3"/><span><b>3.</b> BIOS 是不會中毒的</span></label><label class="opt"><input name="q21" type="radio" value="4"/><span><b>4.</b> 當電腦開機後，BIOS 就會立刻運作檢查您電腦上的相關設備是否正確</span></label></div>
+<div class="fb" id="fb21"></div><div class="qnav-fallback"><a class="secondary" href="#q20">上一題</a><a href="#q22">下一題</a></div>
+</section><section class="q" data-answer="1" id="q22">
+<div class="meta">第 22 題　專業科目｜基本工作｜原題第 67 題</div>
+<div class="stem">AutoCAD 中，自既有的圖檔中直接引用圖塊或圖層的介面指令為</div>
+<div class="opts"><label class="opt"><input class="correct" name="q22" type="radio" value="1"/><span><b>1.</b> ADC</span></label><label class="opt"><input name="q22" type="radio" value="2"/><span><b>2.</b> MINSERT</span></label><label class="opt"><input name="q22" type="radio" value="3"/><span><b>3.</b> Xref</span></label><label class="opt"><input name="q22" type="radio" value="4"/><span><b>4.</b> Mlayer</span></label></div>
+<div class="fb" id="fb22"></div><div class="qnav-fallback"><a class="secondary" href="#q21">上一題</a><a href="#q23">下一題</a></div>
+</section><section class="q" data-answer="3" id="q23">
+<div class="meta">第 23 題　專業科目｜基本圖學｜原題第 1 題</div>
+<div class="stem">下列何種視圖不屬於正投影視圖？</div>
+<div class="opts"><label class="opt"><input name="q23" type="radio" value="1"/><span><b>1.</b> 上視圖</span></label><label class="opt"><input name="q23" type="radio" value="2"/><span><b>2.</b> 正視圖</span></label><label class="opt"><input class="correct" name="q23" type="radio" value="3"/><span><b>3.</b> 透視圖</span></label><label class="opt"><input name="q23" type="radio" value="4"/><span><b>4.</b> 側視圖</span></label></div>
+<div class="fb" id="fb23"></div><div class="qnav-fallback"><a class="secondary" href="#q22">上一題</a><a href="#q24">下一題</a></div>
+</section><section class="q" data-answer="2" id="q24">
+<div class="meta">第 24 題　專業科目｜基本圖學｜原題第 20 題</div>
+<div class="stem">建築物的樓層高度通常都標註在</div>
+<div class="opts"><label class="opt"><input name="q24" type="radio" value="1"/><span><b>1.</b> 平面圖</span></label><label class="opt"><input class="correct" name="q24" type="radio" value="2"/><span><b>2.</b> 立面圖</span></label><label class="opt"><input name="q24" type="radio" value="3"/><span><b>3.</b> 大樣圖</span></label><label class="opt"><input name="q24" type="radio" value="4"/><span><b>4.</b> 配置圖</span></label></div>
+<div class="fb" id="fb24"></div><div class="qnav-fallback"><a class="secondary" href="#q23">上一題</a><a href="#q25">下一題</a></div>
+</section><section class="q" data-answer="2" id="q25">
+<div class="meta">第 25 題　專業科目｜基本工作｜原題第 30 題</div>
+<div class="stem">電腦中所稱之唯讀存取記憶體為</div>
+<div class="opts"><label class="opt"><input name="q25" type="radio" value="1"/><span><b>1.</b> RAM</span></label><label class="opt"><input class="correct" name="q25" type="radio" value="2"/><span><b>2.</b> ROM</span></label><label class="opt"><input name="q25" type="radio" value="3"/><span><b>3.</b> CDRW</span></label><label class="opt"><input name="q25" type="radio" value="4"/><span><b>4.</b> MO</span></label></div>
+<div class="fb" id="fb25"></div><div class="qnav-fallback"><a class="secondary" href="#q24">上一題</a><a href="#q26">下一題</a></div>
+</section><section class="q" data-answer="3" id="q26">
+<div class="meta">第 26 題　專業科目｜繪製圖樣｜原題第 76 題</div>
+<div class="stem">建築電氣設備圖例中，何者表示三路開關？</div><div class="visual"><img alt="題目圖示" src="data:image/webp;base64,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"/></div>
+<div class="opts"><label class="opt"><input name="q26" type="radio" value="1"/><span><b>1.</b> ●</span></label><label class="opt"><input name="q26" type="radio" value="2"/><span><b>2.</b> ●</span></label><label class="opt"><input class="correct" name="q26" type="radio" value="3"/><span><b>3.</b> ●</span></label><label class="opt"><input name="q26" type="radio" value="4"/><span><b>4.</b> ●</span></label></div>
+<div class="fb" id="fb26"></div><div class="qnav-fallback"><a class="secondary" href="#q25">上一題</a><a href="#q27">下一題</a></div>
+</section><section class="q" data-answer="3" id="q27">
+<div class="meta">第 27 題　專業科目｜識圖｜原題第 18 題</div>
+<div class="stem">在比例尺為1/300 的圖面上，以足尺量得5 ㎝長度的物體，其實際長度為</div>
+<div class="opts"><label class="opt"><input name="q27" type="radio" value="1"/><span><b>1.</b> 6m</span></label><label class="opt"><input name="q27" type="radio" value="2"/><span><b>2.</b> 60m</span></label><label class="opt"><input class="correct" name="q27" type="radio" value="3"/><span><b>3.</b> 15m</span></label><label class="opt"><input name="q27" type="radio" value="4"/><span><b>4.</b> 150m</span></label></div>
+<div class="fb" id="fb27"></div><div class="qnav-fallback"><a class="secondary" href="#q26">上一題</a><a href="#q28">下一題</a></div>
+</section><section class="q" data-answer="2" id="q28">
+<div class="meta">第 28 題　專業科目｜識圖｜原題第 92 題</div>
+<div class="stem">欲清洗馬賽克、瓷磚等表面污物時，應使用</div>
+<div class="opts"><label class="opt"><input name="q28" type="radio" value="1"/><span><b>1.</b> 強硝酸</span></label><label class="opt"><input class="correct" name="q28" type="radio" value="2"/><span><b>2.</b> 稀鹽酸水</span></label><label class="opt"><input name="q28" type="radio" value="3"/><span><b>3.</b> 濃硫酸</span></label><label class="opt"><input name="q28" type="radio" value="4"/><span><b>4.</b> 食鹽水</span></label></div>
+<div class="fb" id="fb28"></div><div class="qnav-fallback"><a class="secondary" href="#q27">上一題</a><a href="#q29">下一題</a></div>
+</section><section class="q" data-answer="1" id="q29">
+<div class="meta">第 29 題　專業科目｜基本圖學｜原題第 83 題</div>
+<div class="stem">尺度線必須與所標註長度之面</div>
+<div class="opts"><label class="opt"><input class="correct" name="q29" type="radio" value="1"/><span><b>1.</b> 平行</span></label><label class="opt"><input name="q29" type="radio" value="2"/><span><b>2.</b> 垂直</span></label><label class="opt"><input name="q29" type="radio" value="3"/><span><b>3.</b> 相交</span></label><label class="opt"><input name="q29" type="radio" value="4"/><span><b>4.</b> 重疊</span></label></div>
+<div class="fb" id="fb29"></div><div class="qnav-fallback"><a class="secondary" href="#q28">上一題</a><a href="#q30">下一題</a></div>
+</section><section class="q" data-answer="2" id="q30">
+<div class="meta">第 30 題　專業科目｜繪製圖樣｜原題第 45 題</div>
+<div class="stem">常時關閉式之防火門構造要求，下列何者不符規定？</div>
+<div class="opts"><label class="opt"><input name="q30" type="radio" value="1"/><span><b>1.</b> 免用鑰匙即可開啟</span></label><label class="opt"><input class="correct" name="q30" type="radio" value="2"/><span><b>2.</b> 單一門扇面積不得超過2.5 平方公 尺</span></label><label class="opt"><input name="q30" type="radio" value="3"/><span><b>3.</b> 不得設置門止</span></label><label class="opt"><input name="q30" type="radio" value="4"/><span><b>4.</b> 門扇或門樘上應標示常時關閉式防火門等文字</span></label></div>
+<div class="fb" id="fb30"></div><div class="qnav-fallback"><a class="secondary" href="#q29">上一題</a><a href="#q31">下一題</a></div>
+</section><section class="q" data-answer="3" id="q31">
+<div class="meta">第 31 題　專業科目｜識圖｜原題第 16 題</div>
+<div class="stem">建築構造中，所謂的五皮柏油油毛氈防水層是指</div>
+<div class="opts"><label class="opt"><input name="q31" type="radio" value="1"/><span><b>1.</b> 油毛氈3 皮、柏油2 皮</span></label><label class="opt"><input name="q31" type="radio" value="2"/><span><b>2.</b> 油毛氈5 皮、柏油4 皮</span></label><label class="opt"><input class="correct" name="q31" type="radio" value="3"/><span><b>3.</b> 油毛氈2 皮、柏油3 皮</span></label><label class="opt"><input name="q31" type="radio" value="4"/><span><b>4.</b> 油毛氈4 皮、柏油5 皮</span></label></div>
+<div class="fb" id="fb31"></div><div class="qnav-fallback"><a class="secondary" href="#q30">上一題</a><a href="#q32">下一題</a></div>
+</section><section class="q" data-answer="3" id="q32">
+<div class="meta">第 32 題　專業科目｜繪製圖樣｜原題第 59 題</div>
+<div class="stem">小學校舍供兒童使用之樓梯，其級高不得大於</div>
+<div class="opts"><label class="opt"><input name="q32" type="radio" value="1"/><span><b>1.</b> 12 公分</span></label><label class="opt"><input name="q32" type="radio" value="2"/><span><b>2.</b> 20 公分</span></label><label class="opt"><input class="correct" name="q32" type="radio" value="3"/><span><b>3.</b> 16 公分</span></label><label class="opt"><input name="q32" type="radio" value="4"/><span><b>4.</b> 18 公分</span></label></div>
+<div class="fb" id="fb32"></div><div class="qnav-fallback"><a class="secondary" href="#q31">上一題</a><a href="#q33">下一題</a></div>
+</section><section class="q" data-answer="2" id="q33">
+<div class="meta">第 33 題　專業科目｜識圖｜原題第 10 題</div>
+<div class="stem">結構圖的圖號為</div>
+<div class="opts"><label class="opt"><input name="q33" type="radio" value="1"/><span><b>1.</b> A</span></label><label class="opt"><input class="correct" name="q33" type="radio" value="2"/><span><b>2.</b> S</span></label><label class="opt"><input name="q33" type="radio" value="3"/><span><b>3.</b> P</span></label><label class="opt"><input name="q33" type="radio" value="4"/><span><b>4.</b> F</span></label></div>
+<div class="fb" id="fb33"></div><div class="qnav-fallback"><a class="secondary" href="#q32">上一題</a><a href="#q34">下一題</a></div>
+</section><section class="q" data-answer="2" id="q34">
+<div class="meta">第 34 題　專業科目｜繪製圖樣｜原題第 3 題</div>
+<div class="stem">學校樓梯一次爬行的垂直高不得超過多少公尺，否則應在其間加設平臺？</div>
+<div class="opts"><label class="opt"><input name="q34" type="radio" value="1"/><span><b>1.</b> 2 公尺</span></label><label class="opt"><input class="correct" name="q34" type="radio" value="2"/><span><b>2.</b> 3 公尺</span></label><label class="opt"><input name="q34" type="radio" value="3"/><span><b>3.</b> 4 公尺</span></label><label class="opt"><input name="q34" type="radio" value="4"/><span><b>4.</b> 沒有限 制</span></label></div>
+<div class="fb" id="fb34"></div><div class="qnav-fallback"><a class="secondary" href="#q33">上一題</a><a href="#q35">下一題</a></div>
+</section><section class="q" data-answer="3" id="q35">
+<div class="meta">第 35 題　專業科目｜繪製圖樣｜原題第 105 題</div>
+<div class="stem">電腦程式著作之著作財產權存續至著作公開發表後幾年﹖</div>
+<div class="opts"><label class="opt"><input name="q35" type="radio" value="1"/><span><b>1.</b> 20 年</span></label><label class="opt"><input name="q35" type="radio" value="2"/><span><b>2.</b> 40 年</span></label><label class="opt"><input class="correct" name="q35" type="radio" value="3"/><span><b>3.</b> 50 年</span></label><label class="opt"><input name="q35" type="radio" value="4"/><span><b>4.</b> 60 年</span></label></div>
+<div class="fb" id="fb35"></div><div class="qnav-fallback"><a class="secondary" href="#q34">上一題</a><a href="#q36">下一題</a></div>
+</section><section class="q" data-answer="2" id="q36">
+<div class="meta">第 36 題　專業科目｜繪製圖樣｜原題第 42 題</div>
+<div class="stem">依規定設置供殘障者使用的室外引導通路之淨寬不得小於</div>
+<div class="opts"><label class="opt"><input name="q36" type="radio" value="1"/><span><b>1.</b> 1.0 公尺</span></label><label class="opt"><input class="correct" name="q36" type="radio" value="2"/><span><b>2.</b> 1.3 公尺</span></label><label class="opt"><input name="q36" type="radio" value="3"/><span><b>3.</b> 1.5 公尺</span></label><label class="opt"><input name="q36" type="radio" value="4"/><span><b>4.</b> 2.0 公尺</span></label></div>
+<div class="fb" id="fb36"></div><div class="qnav-fallback"><a class="secondary" href="#q35">上一題</a><a href="#q37">下一題</a></div>
+</section><section class="q" data-answer="2" id="q37">
+<div class="meta">第 37 題　專業科目｜識圖｜原題第 125 題</div>
+<div class="stem">房屋之外部主要裝修材料應標示於何種圖面上？</div>
+<div class="opts"><label class="opt"><input name="q37" type="radio" value="1"/><span><b>1.</b> 平面圖</span></label><label class="opt"><input class="correct" name="q37" type="radio" value="2"/><span><b>2.</b> 立面圖</span></label><label class="opt"><input name="q37" type="radio" value="3"/><span><b>3.</b> 大樣圖</span></label><label class="opt"><input name="q37" type="radio" value="4"/><span><b>4.</b> 透視圖</span></label></div>
+<div class="fb" id="fb37"></div><div class="qnav-fallback"><a class="secondary" href="#q36">上一題</a><a href="#q38">下一題</a></div>
+</section><section class="q" data-answer="1" id="q38">
+<div class="meta">第 38 題　專業科目｜基本工作｜原題第 98 題</div>
+<div class="stem">在AutoCAD 中，使用VIEWPORTS 指令是用來</div>
+<div class="opts"><label class="opt"><input class="correct" name="q38" type="radio" value="1"/><span><b>1.</b> 製作非重疊視埠</span></label><label class="opt"><input name="q38" type="radio" value="2"/><span><b>2.</b> 儲存或取回視景</span></label><label class="opt"><input name="q38" type="radio" value="3"/><span><b>3.</b> 製作重疊視埠</span></label><label class="opt"><input name="q38" type="radio" value="4"/><span><b>4.</b> 自訂座 標</span></label></div>
+<div class="fb" id="fb38"></div><div class="qnav-fallback"><a class="secondary" href="#q37">上一題</a><a href="#q39">下一題</a></div>
+</section><section class="q" data-answer="2" id="q39">
+<div class="meta">第 39 題　專業科目｜繪製圖樣｜原題第 65 題</div>
+<div class="stem">集合住宅樓梯級高尺寸不得超過</div>
+<div class="opts"><label class="opt"><input name="q39" type="radio" value="1"/><span><b>1.</b> 24 公分</span></label><label class="opt"><input class="correct" name="q39" type="radio" value="2"/><span><b>2.</b> 20 公分</span></label><label class="opt"><input name="q39" type="radio" value="3"/><span><b>3.</b> 18 公分</span></label><label class="opt"><input name="q39" type="radio" value="4"/><span><b>4.</b> 16 公分</span></label></div>
+<div class="fb" id="fb39"></div><div class="qnav-fallback"><a class="secondary" href="#q38">上一題</a><a href="#q40">下一題</a></div>
+</section><section class="q" data-answer="3" id="q40">
+<div class="meta">第 40 題　專業科目｜識圖｜原題第 100 題</div>
+<div class="stem">以鋼筋混凝土梁柱及樓版加強的磚造建築物，其簷高不得超過多少公尺？</div>
+<div class="opts"><label class="opt"><input name="q40" type="radio" value="1"/><span><b>1.</b> 6 公尺</span></label><label class="opt"><input name="q40" type="radio" value="2"/><span><b>2.</b> 9 公尺</span></label><label class="opt"><input class="correct" name="q40" type="radio" value="3"/><span><b>3.</b> 10 公尺</span></label><label class="opt"><input name="q40" type="radio" value="4"/><span><b>4.</b> 12 公尺</span></label></div>
+<div class="fb" id="fb40"></div><div class="qnav-fallback"><a class="secondary" href="#q39">上一題</a><a href="#q41">下一題</a></div>
+</section><section class="q" data-answer="3" id="q41">
+<div class="meta">第 41 題　共同科目3｜環境保護｜原題第 57 題</div>
+<div class="stem">哪一種家庭廢棄物可用來作為製造肥皂的主要原料？</div>
+<div class="opts"><label class="opt"><input name="q41" type="radio" value="1"/><span><b>1.</b> 食醋</span></label><label class="opt"><input name="q41" type="radio" value="2"/><span><b>2.</b> 果皮</span></label><label class="opt"><input class="correct" name="q41" type="radio" value="3"/><span><b>3.</b> 回 鍋油</span></label><label class="opt"><input name="q41" type="radio" value="4"/><span><b>4.</b> 熟廚餘</span></label></div>
+<div class="fb" id="fb41"></div><div class="qnav-fallback"><a class="secondary" href="#q40">上一題</a><a href="#q42">下一題</a></div>
+</section><section class="q" data-answer="3" id="q42">
+<div class="meta">第 42 題　專業科目｜識圖｜原題第 119 題</div>
+<div class="stem">混凝土之坍度單位為</div>
+<div class="opts"><label class="opt"><input name="q42" type="radio" value="1"/><span><b>1.</b> kg/cm</span></label><label class="opt"><input name="q42" type="radio" value="2"/><span><b>2.</b> 磅/吋</span></label><label class="opt"><input class="correct" name="q42" type="radio" value="3"/><span><b>3.</b> cm</span></label><label class="opt"><input name="q42" type="radio" value="4"/><span><b>4.</b> kg</span></label></div>
+<div class="fb" id="fb42"></div><div class="qnav-fallback"><a class="secondary" href="#q41">上一題</a><a href="#q43">下一題</a></div>
+</section><section class="q" data-answer="3" id="q43">
+<div class="meta">第 43 題　共同科目2｜工作倫理與職業道德｜原題第 90 題</div>
+<div class="stem">根據性別平等工作法，有關雇主防治性騷擾之責任與罰則，下列何者錯 誤？</div>
+<div class="opts"><label class="opt"><input name="q43" type="radio" value="1"/><span><b>1.</b> 僱用受僱者30 人以上者，應訂定性騷擾防治措施、申訴及懲戒規 範</span></label><label class="opt"><input name="q43" type="radio" value="2"/><span><b>2.</b> 雇主知悉性騷擾發生時，應採取立即有效之糾正及補救措施</span></label><label class="opt"><input class="correct" name="q43" type="radio" value="3"/><span><b>3.</b> 雇主 違反應訂定性騷擾防治措施之規定時，處以罰鍰即可，不用公布其姓名</span></label><label class="opt"><input name="q43" type="radio" value="4"/><span><b>4.</b> 雇主違反應訂定性騷擾申訴管道者，應限期令其改善，屆期未改善者，應 按次處罰</span></label></div>
+<div class="fb" id="fb43"></div><div class="qnav-fallback"><a class="secondary" href="#q42">上一題</a><a href="#q44">下一題</a></div>
+</section><section class="q" data-answer="2" id="q44">
+<div class="meta">第 44 題　專業科目｜識圖｜原題第 67 題</div>
+<div class="stem">建築圖面上標示B.C.L 為</div>
+<div class="opts"><label class="opt"><input name="q44" type="radio" value="1"/><span><b>1.</b> 柱中心線</span></label><label class="opt"><input class="correct" name="q44" type="radio" value="2"/><span><b>2.</b> 梁中心線</span></label><label class="opt"><input name="q44" type="radio" value="3"/><span><b>3.</b> 樓版中心線</span></label><label class="opt"><input name="q44" type="radio" value="4"/><span><b>4.</b> 牆中心線</span></label></div>
+<div class="fb" id="fb44"></div><div class="qnav-fallback"><a class="secondary" href="#q43">上一題</a><a href="#q45">下一題</a></div>
+</section><section class="q" data-answer="4" id="q45">
+<div class="meta">第 45 題　專業科目｜繪製圖樣｜原題第 4 題</div>
+<div class="stem">供集合住宅使用的建築物，其每層的樓地板面積超過多少，則需設置兩座以上的直通樓梯通達避難層或地面</div>
+<div class="opts"><label class="opt"><input name="q45" type="radio" value="1"/><span><b>1.</b> 180 ㎡</span></label><label class="opt"><input name="q45" type="radio" value="2"/><span><b>2.</b> 200 ㎡</span></label><label class="opt"><input name="q45" type="radio" value="3"/><span><b>3.</b> 220 ㎡</span></label><label class="opt"><input class="correct" name="q45" type="radio" value="4"/><span><b>4.</b> 240 ㎡</span></label></div>
+<div class="fb" id="fb45"></div><div class="qnav-fallback"><a class="secondary" href="#q44">上一題</a><a href="#q46">下一題</a></div>
+</section><section class="q" data-answer="1" id="q46">
+<div class="meta">第 46 題　專業科目｜基本工作｜原題第 22 題</div>
+<div class="stem">電腦繪圖軟體AutoCAD 中，指令LINE 屬</div>
+<div class="opts"><label class="opt"><input class="correct" name="q46" type="radio" value="1"/><span><b>1.</b> 畫直線</span></label><label class="opt"><input name="q46" type="radio" value="2"/><span><b>2.</b> 畫圓</span></label><label class="opt"><input name="q46" type="radio" value="3"/><span><b>3.</b> 畫弧線</span></label><label class="opt"><input name="q46" type="radio" value="4"/><span><b>4.</b> 畫曲線</span></label></div>
+<div class="fb" id="fb46"></div><div class="qnav-fallback"><a class="secondary" href="#q45">上一題</a><a href="#q47">下一題</a></div>
+</section><section class="q" data-answer="4" id="q47">
+<div class="meta">第 47 題　共同科目4｜節能減碳｜原題第 51 題</div>
+<div class="stem">有關建築之外殼節能設計，下列敘述何者錯誤？</div>
+<div class="opts"><label class="opt"><input name="q47" type="radio" value="1"/><span><b>1.</b> 開窗區域設置遮陽設備</span></label><label class="opt"><input name="q47" type="radio" value="2"/><span><b>2.</b> 大開窗面避免設置於東西日曬方位</span></label><label class="opt"><input name="q47" type="radio" value="3"/><span><b>3.</b> 做好屋頂隔熱設施</span></label><label class="opt"><input class="correct" name="q47" type="radio" value="4"/><span><b>4.</b> 宜採用全面 玻璃造型設計，以利自然採光</span></label></div>
+<div class="fb" id="fb47"></div><div class="qnav-fallback"><a class="secondary" href="#q46">上一題</a><a href="#q48">下一題</a></div>
+</section><section class="q" data-answer="1" id="q48">
+<div class="meta">第 48 題　專業科目｜識圖｜原題第 24 題</div>
+<div class="stem">都市計畫使用分區圖中，行政區是以何種顏色外框表示？</div>
+<div class="opts"><label class="opt"><input class="correct" name="q48" type="radio" value="1"/><span><b>1.</b> 綠色</span></label><label class="opt"><input name="q48" type="radio" value="2"/><span><b>2.</b> 黃色</span></label><label class="opt"><input name="q48" type="radio" value="3"/><span><b>3.</b> 紅色</span></label><label class="opt"><input name="q48" type="radio" value="4"/><span><b>4.</b> 褐色</span></label></div>
+<div class="fb" id="fb48"></div><div class="qnav-fallback"><a class="secondary" href="#q47">上一題</a><a href="#q49">下一題</a></div>
+</section><section class="q" data-answer="1" id="q49">
+<div class="meta">第 49 題　共同科目4｜節能減碳｜原題第 58 題</div>
+<div class="stem">依據我國現行國家標準規定，冷氣機的冷氣能力標示應以何種單位表示？</div>
+<div class="opts"><label class="opt"><input class="correct" name="q49" type="radio" value="1"/><span><b>1.</b> kW</span></label><label class="opt"><input name="q49" type="radio" value="2"/><span><b>2.</b> BTU/h</span></label><label class="opt"><input name="q49" type="radio" value="3"/><span><b>3.</b> kcal/h</span></label><label class="opt"><input name="q49" type="radio" value="4"/><span><b>4.</b> RT</span></label></div>
+<div class="fb" id="fb49"></div><div class="qnav-fallback"><a class="secondary" href="#q48">上一題</a><a href="#q50">下一題</a></div>
+</section><section class="q" data-answer="4" id="q50">
+<div class="meta">第 50 題　專業科目｜基本工作｜原題第 95 題</div>
+<div class="stem">在Windows 作業系統中，如何取得線上輔助說明？</div>
+<div class="opts"><label class="opt"><input name="q50" type="radio" value="1"/><span><b>1.</b> 按ESC 鍵</span></label><label class="opt"><input name="q50" type="radio" value="2"/><span><b>2.</b> 按F3 鍵</span></label><label class="opt"><input name="q50" type="radio" value="3"/><span><b>3.</b> 「開始／執行」</span></label><label class="opt"><input class="correct" name="q50" type="radio" value="4"/><span><b>4.</b> 按F1 鍵</span></label></div>
+<div class="fb" id="fb50"></div><div class="qnav-fallback"><a class="secondary" href="#q49">上一題</a><a href="#q51">下一題</a></div>
+</section><section class="q" data-answer="2" id="q51">
+<div class="meta">第 51 題　專業科目｜基本工作｜原題第 79 題</div>
+<div class="stem">TWINCAD、AutoCAD 及Microstation 都可載入的圖檔為</div>
+<div class="opts"><label class="opt"><input name="q51" type="radio" value="1"/><span><b>1.</b> .dgn</span></label><label class="opt"><input class="correct" name="q51" type="radio" value="2"/><span><b>2.</b> .dwg</span></label><label class="opt"><input name="q51" type="radio" value="3"/><span><b>3.</b> .wrk</span></label><label class="opt"><input name="q51" type="radio" value="4"/><span><b>4.</b> .gcd</span></label></div>
+<div class="fb" id="fb51"></div><div class="qnav-fallback"><a class="secondary" href="#q50">上一題</a><a href="#q52">下一題</a></div>
+</section><section class="q" data-answer="1" id="q52">
+<div class="meta">第 52 題　專業科目｜識圖｜原題第 79 題</div>
+<div class="stem">下列何者非建築平面圖常用比例尺？</div>
+<div class="opts"><label class="opt"><input class="correct" name="q52" type="radio" value="1"/><span><b>1.</b> 1/30</span></label><label class="opt"><input name="q52" type="radio" value="2"/><span><b>2.</b> 1/50</span></label><label class="opt"><input name="q52" type="radio" value="3"/><span><b>3.</b> 1/100</span></label><label class="opt"><input name="q52" type="radio" value="4"/><span><b>4.</b> 1/200</span></label></div>
+<div class="fb" id="fb52"></div><div class="qnav-fallback"><a class="secondary" href="#q51">上一題</a><a href="#q53">下一題</a></div>
+</section><section class="q" data-answer="4" id="q53">
+<div class="meta">第 53 題　共同科目1｜職業安全衛生｜原題第 86 題</div>
+<div class="stem">下列何者非屬從事起重吊掛作業導致物體飛落災害之可能原因？</div>
+<div class="opts"><label class="opt"><input name="q53" type="radio" value="1"/><span><b>1.</b> 吊鉤未 設防滑舌片致吊掛鋼索鬆脫</span></label><label class="opt"><input name="q53" type="radio" value="2"/><span><b>2.</b> 鋼索斷裂</span></label><label class="opt"><input name="q53" type="radio" value="3"/><span><b>3.</b> 超過額定荷重作業</span></label><label class="opt"><input class="correct" name="q53" type="radio" value="4"/><span><b>4.</b> 過捲揚警 報裝置過度靈敏</span></label></div>
+<div class="fb" id="fb53"></div><div class="qnav-fallback"><a class="secondary" href="#q52">上一題</a><a href="#q54">下一題</a></div>
+</section><section class="q" data-answer="4" id="q54">
+<div class="meta">第 54 題　專業科目｜基本圖學｜原題第 57 題</div>
+<div class="stem">過圓周上任一點作切線，則此點與圓心連線必與該切線夾角成</div>
+<div class="opts"><label class="opt"><input name="q54" type="radio" value="1"/><span><b>1.</b> 30 度</span></label><label class="opt"><input name="q54" type="radio" value="2"/><span><b>2.</b> 45 度</span></label><label class="opt"><input name="q54" type="radio" value="3"/><span><b>3.</b> 60 度</span></label><label class="opt"><input class="correct" name="q54" type="radio" value="4"/><span><b>4.</b> 90 度</span></label></div>
+<div class="fb" id="fb54"></div><div class="qnav-fallback"><a class="secondary" href="#q53">上一題</a><a href="#q55">下一題</a></div>
+</section><section class="q" data-answer="1" id="q55">
+<div class="meta">第 55 題　專業科目｜基本圖學｜原題第 13 題</div>
+<div class="stem">在平面上不共線的三個點，可以決定下列何種唯一之曲線？</div>
+<div class="opts"><label class="opt"><input class="correct" name="q55" type="radio" value="1"/><span><b>1.</b> 圓</span></label><label class="opt"><input name="q55" type="radio" value="2"/><span><b>2.</b> 橢圓</span></label><label class="opt"><input name="q55" type="radio" value="3"/><span><b>3.</b> 拋物線</span></label><label class="opt"><input name="q55" type="radio" value="4"/><span><b>4.</b> 雙曲線</span></label></div>
+<div class="fb" id="fb55"></div><div class="qnav-fallback"><a class="secondary" href="#q54">上一題</a><a href="#q56">下一題</a></div>
+</section><section class="q" data-answer="2" id="q56">
+<div class="meta">第 56 題　共同科目3｜環境保護｜原題第 66 題</div>
+<div class="stem">依環境影響評估法規定，環境影響評估審查委員會審查環境影響說明書， 認定下列對環境有重大影響之虞者，應繼續進行第二階段環境影響評估， 下列何者非屬對環境有重大影響之虞者？</div>
+<div class="opts"><label class="opt"><input name="q56" type="radio" value="1"/><span><b>1.</b> 對保育類動植物之棲息生存有 顯著不利之影響</span></label><label class="opt"><input class="correct" name="q56" type="radio" value="2"/><span><b>2.</b> 對國家經濟有顯著不利之影響</span></label><label class="opt"><input name="q56" type="radio" value="3"/><span><b>3.</b> 對國民健康有顯著不 利之影響</span></label><label class="opt"><input name="q56" type="radio" value="4"/><span><b>4.</b> 對其他國家之環境有顯著不利之影響</span></label></div>
+<div class="fb" id="fb56"></div><div class="qnav-fallback"><a class="secondary" href="#q55">上一題</a><a href="#q57">下一題</a></div>
+</section><section class="q" data-answer="1" id="q57">
+<div class="meta">第 57 題　專業科目｜繪製圖樣｜原題第 118 題</div>
+<div class="stem">職業道德在職業訓練上是怎樣的課程？</div>
+<div class="opts"><label class="opt"><input class="correct" name="q57" type="radio" value="1"/><span><b>1.</b> 必修</span></label><label class="opt"><input name="q57" type="radio" value="2"/><span><b>2.</b> 免修</span></label><label class="opt"><input name="q57" type="radio" value="3"/><span><b>3.</b> 選修</span></label><label class="opt"><input name="q57" type="radio" value="4"/><span><b>4.</b> 不關緊要</span></label></div>
+<div class="fb" id="fb57"></div><div class="qnav-fallback"><a class="secondary" href="#q56">上一題</a><a href="#q58">下一題</a></div>
+</section><section class="q" data-answer="4" id="q58">
+<div class="meta">第 58 題　共同科目2｜工作倫理與職業道德｜原題第 30 題</div>
+<div class="stem">所謂營業秘密，係指方法、技術、製程、配方、程式、設計或其他可用於 生產、銷售或經營之資訊，但其保障所需符合的要件不包括下列何者？</div>
+<div class="opts"><label class="opt"><input name="q58" type="radio" value="1"/><span><b>1.</b> 因其秘密性而具有實際之經濟價值者</span></label><label class="opt"><input name="q58" type="radio" value="2"/><span><b>2.</b> 所有人已採取合理之保密措施者</span></label><label class="opt"><input name="q58" type="radio" value="3"/><span><b>3.</b> 因其秘密性而具有潛在之經濟價值者</span></label><label class="opt"><input class="correct" name="q58" type="radio" value="4"/><span><b>4.</b> 一般涉及該類資訊之人所知 者</span></label></div>
+<div class="fb" id="fb58"></div><div class="qnav-fallback"><a class="secondary" href="#q57">上一題</a><a href="#q59">下一題</a></div>
+</section><section class="q" data-answer="1" id="q59">
+<div class="meta">第 59 題　專業科目｜基本工作｜原題第 1 題</div>
+<div class="stem">電腦輔助建築製圖，圖形檔的副檔名，下列何者為非？</div>
+<div class="opts"><label class="opt"><input class="correct" name="q59" type="radio" value="1"/><span><b>1.</b> BAK</span></label><label class="opt"><input name="q59" type="radio" value="2"/><span><b>2.</b> DWG</span></label><label class="opt"><input name="q59" type="radio" value="3"/><span><b>3.</b> DXB</span></label><label class="opt"><input name="q59" type="radio" value="4"/><span><b>4.</b> DXF</span></label></div>
+<div class="fb" id="fb59"></div><div class="qnav-fallback"><a class="secondary" href="#q58">上一題</a><a href="#q60">下一題</a></div>
+</section><section class="q" data-answer="4" id="q60">
+<div class="meta">第 60 題　專業科目｜繪製圖樣｜原題第 60 題</div>
+<div class="stem">自動樓梯坡度不得大於</div>
+<div class="opts"><label class="opt"><input name="q60" type="radio" value="1"/><span><b>1.</b> 20 度</span></label><label class="opt"><input name="q60" type="radio" value="2"/><span><b>2.</b> 45 度</span></label><label class="opt"><input name="q60" type="radio" value="3"/><span><b>3.</b> 60 度</span></label><label class="opt"><input class="correct" name="q60" type="radio" value="4"/><span><b>4.</b> 30 度</span></label></div>
+<div class="fb" id="fb60"></div><div class="qnav-fallback"><a class="secondary" href="#q59">上一題</a><a href="#q61">下一題</a></div>
+</section><section class="q" data-answer="1" id="q61">
+<div class="meta">第 61 題　專業科目｜基本工作｜原題第 96 題</div>
+<div class="stem">結束Windows 並關閉電源，何者為正確之操作程序？</div>
+<div class="opts"><label class="opt"><input class="correct" name="q61" type="radio" value="1"/><span><b>1.</b> 「開始功能表／關機／關閉這台電腦」，再關閉電源</span></label><label class="opt"><input name="q61" type="radio" value="2"/><span><b>2.</b> 關閉電腦主機之電源</span></label><label class="opt"><input name="q61" type="radio" value="3"/><span><b>3.</b> 「開始功能表／關機／將電腦重新啟動在MS-DOS 程式」，再關閉電源</span></label><label class="opt"><input name="q61" type="radio" value="4"/><span><b>4.</b> 拔掉插頭</span></label></div>
+<div class="fb" id="fb61"></div><div class="qnav-fallback"><a class="secondary" href="#q60">上一題</a><a href="#q62">下一題</a></div>
+</section><section class="q" data-answer="3" id="q62">
+<div class="meta">第 62 題　共同科目1｜職業安全衛生｜原題第 60 題</div>
+<div class="stem">下列何種防護具較能消減噪音對聽力的危害？</div>
+<div class="opts"><label class="opt"><input name="q62" type="radio" value="1"/><span><b>1.</b> 棉花球</span></label><label class="opt"><input name="q62" type="radio" value="2"/><span><b>2.</b> 耳塞</span></label><label class="opt"><input class="correct" name="q62" type="radio" value="3"/><span><b>3.</b> 耳罩</span></label><label class="opt"><input name="q62" type="radio" value="4"/><span><b>4.</b> 碎布球</span></label></div>
+<div class="fb" id="fb62"></div><div class="qnav-fallback"><a class="secondary" href="#q61">上一題</a><a href="#q63">下一題</a></div>
+</section><section class="q" data-answer="3" id="q63">
+<div class="meta">第 63 題　專業科目｜識圖｜原題第 132 題</div>
+<div class="stem">混凝土圓柱試體，其直徑與高度之比為</div>
+<div class="opts"><label class="opt"><input name="q63" type="radio" value="1"/><span><b>1.</b> 1：1</span></label><label class="opt"><input name="q63" type="radio" value="2"/><span><b>2.</b> 1：1.5</span></label><label class="opt"><input class="correct" name="q63" type="radio" value="3"/><span><b>3.</b> 1：2</span></label><label class="opt"><input name="q63" type="radio" value="4"/><span><b>4.</b> 1：3</span></label></div>
+<div class="fb" id="fb63"></div><div class="qnav-fallback"><a class="secondary" href="#q62">上一題</a><a href="#q64">下一題</a></div>
+</section><section class="q" data-answer="3" id="q64">
+<div class="meta">第 64 題　共同科目2｜工作倫理與職業道德｜原題第 96 題</div>
+<div class="stem">關於菸品對人體危害的敘述，下列何者正確？</div>
+<div class="opts"><label class="opt"><input name="q64" type="radio" value="1"/><span><b>1.</b> 只要開電風扇、或是抽風 機就可以去除菸霧中的有害物質</span></label><label class="opt"><input name="q64" type="radio" value="2"/><span><b>2.</b> 指定菸品（如：加熱菸）只要通過健康 風險評估，就不會危害健康，因此工作時如果想吸菸，就可以在職場拿出 來使用</span></label><label class="opt"><input class="correct" name="q64" type="radio" value="3"/><span><b>3.</b> 雖然自己不吸菸，同事在旁邊吸菸，就會增加自己得肺癌的機率</span></label><label class="opt"><input name="q64" type="radio" value="4"/><span><b>4.</b> 只要不將菸吸入肺部，就不會對身體造成傷害</span></label></div>
+<div class="fb" id="fb64"></div><div class="qnav-fallback"><a class="secondary" href="#q63">上一題</a><a href="#q65">下一題</a></div>
+</section><section class="q" data-answer="1" id="q65">
+<div class="meta">第 65 題　共同科目1｜職業安全衛生｜原題第 50 題</div>
+<div class="stem">腕道症候群常發生於下列何種作業？</div>
+<div class="opts"><label class="opt"><input class="correct" name="q65" type="radio" value="1"/><span><b>1.</b> 電腦鍵盤作業</span></label><label class="opt"><input name="q65" type="radio" value="2"/><span><b>2.</b> 潛水作業</span></label><label class="opt"><input name="q65" type="radio" value="3"/><span><b>3.</b> 堆高 機作業</span></label><label class="opt"><input name="q65" type="radio" value="4"/><span><b>4.</b> 第一種壓力容器作業</span></label></div>
+<div class="fb" id="fb65"></div><div class="qnav-fallback"><a class="secondary" href="#q64">上一題</a><a href="#q66">下一題</a></div>
+</section><section class="q" data-answer="3" id="q66">
+<div class="meta">第 66 題　專業科目｜繪製圖樣｜原題第 52 題</div>
+<div class="stem">一般空心磚之標準模距為</div>
+<div class="opts"><label class="opt"><input name="q66" type="radio" value="1"/><span><b>1.</b> 9 公分</span></label><label class="opt"><input name="q66" type="radio" value="2"/><span><b>2.</b> 19 公分</span></label><label class="opt"><input class="correct" name="q66" type="radio" value="3"/><span><b>3.</b> 20 公分</span></label><label class="opt"><input name="q66" type="radio" value="4"/><span><b>4.</b> 40 公分</span></label></div>
+<div class="fb" id="fb66"></div><div class="qnav-fallback"><a class="secondary" href="#q65">上一題</a><a href="#q67">下一題</a></div>
+</section><section class="q" data-answer="1" id="q67">
+<div class="meta">第 67 題　專業科目｜識圖｜原題第 9 題</div>
+<div class="stem">汽車坡道之坡度不得大於</div>
+<div class="opts"><label class="opt"><input class="correct" name="q67" type="radio" value="1"/><span><b>1.</b> 1/6</span></label><label class="opt"><input name="q67" type="radio" value="2"/><span><b>2.</b> 1/8</span></label><label class="opt"><input name="q67" type="radio" value="3"/><span><b>3.</b> 1/10</span></label><label class="opt"><input name="q67" type="radio" value="4"/><span><b>4.</b> 1/12</span></label></div>
+<div class="fb" id="fb67"></div><div class="qnav-fallback"><a class="secondary" href="#q66">上一題</a><a href="#q68">下一題</a></div>
+</section><section class="q" data-answer="1" id="q68">
+<div class="meta">第 68 題　專業科目｜基本工作｜原題第 50 題</div>
+<div class="stem">電腦繪圖軟體AutoCAD 中，欲複製LINE、CIRCLE 等圖元時，要使用下列何種指令？</div>
+<div class="opts"><label class="opt"><input class="correct" name="q68" type="radio" value="1"/><span><b>1.</b> COPY</span></label><label class="opt"><input name="q68" type="radio" value="2"/><span><b>2.</b> TRIM</span></label><label class="opt"><input name="q68" type="radio" value="3"/><span><b>3.</b> EXTE ND</span></label><label class="opt"><input name="q68" type="radio" value="4"/><span><b>4.</b> MOVE</span></label></div>
+<div class="fb" id="fb68"></div><div class="qnav-fallback"><a class="secondary" href="#q67">上一題</a><a href="#q69">下一題</a></div>
+</section><section class="q" data-answer="2" id="q69">
+<div class="meta">第 69 題　專業科目｜繪製圖樣｜原題第 15 題</div>
+<div class="stem">新建築物的建造，在建築構造中採用能降低環境衝擊之設計，通常可以稱之為</div>
+<div class="opts"><label class="opt"><input name="q69" type="radio" value="1"/><span><b>1.</b> 新建築</span></label><label class="opt"><input class="correct" name="q69" type="radio" value="2"/><span><b>2.</b> 綠建築</span></label><label class="opt"><input name="q69" type="radio" value="3"/><span><b>3.</b> 摩登建築</span></label><label class="opt"><input name="q69" type="radio" value="4"/><span><b>4.</b> 高級建築</span></label></div>
+<div class="fb" id="fb69"></div><div class="qnav-fallback"><a class="secondary" href="#q68">上一題</a><a href="#q70">下一題</a></div>
+</section><section class="q" data-answer="3" id="q70">
+<div class="meta">第 70 題　共同科目3｜環境保護｜原題第 68 題</div>
+<div class="stem">開發單位申請變更環境影響說明書、評估書內容或審查結論，符合下列哪 一情形，得檢附變更內容對照表辦理？</div>
+<div class="opts"><label class="opt"><input name="q70" type="radio" value="1"/><span><b>1.</b> 既有設備提昇產能而污染總量增 加在百分之十以下</span></label><label class="opt"><input name="q70" type="radio" value="2"/><span><b>2.</b> 降低環境保護設施處理等級或效率</span></label><label class="opt"><input class="correct" name="q70" type="radio" value="3"/><span><b>3.</b> 環境監測計畫 變更</span></label><label class="opt"><input name="q70" type="radio" value="4"/><span><b>4.</b> 開發行為規模增加未超過百分之五</span></label></div>
+<div class="fb" id="fb70"></div><div class="qnav-fallback"><a class="secondary" href="#q69">上一題</a><a href="#q71">下一題</a></div>
+</section><section class="q" data-answer="3" id="q71">
+<div class="meta">第 71 題　專業科目｜基本工作｜原題第 24 題</div>
+<div class="stem">位元(Bit)與字元(Byte)之關係比</div>
+<div class="opts"><label class="opt"><input name="q71" type="radio" value="1"/><span><b>1.</b> 1:2</span></label><label class="opt"><input name="q71" type="radio" value="2"/><span><b>2.</b> 1:4</span></label><label class="opt"><input class="correct" name="q71" type="radio" value="3"/><span><b>3.</b> 1:8</span></label><label class="opt"><input name="q71" type="radio" value="4"/><span><b>4.</b> 1:16</span></label></div>
+<div class="fb" id="fb71"></div><div class="qnav-fallback"><a class="secondary" href="#q70">上一題</a><a href="#q72">下一題</a></div>
+</section><section class="q" data-answer="4" id="q72">
+<div class="meta">第 72 題　專業科目｜繪製圖樣｜原題第 128 題</div>
+<div class="stem">為瞭解建築基地的形狀大小，須向地政事務所請領</div>
+<div class="opts"><label class="opt"><input name="q72" type="radio" value="1"/><span><b>1.</b> 地質圖</span></label><label class="opt"><input name="q72" type="radio" value="2"/><span><b>2.</b> 地形圖</span></label><label class="opt"><input name="q72" type="radio" value="3"/><span><b>3.</b> 都市計畫圖</span></label><label class="opt"><input class="correct" name="q72" type="radio" value="4"/><span><b>4.</b> 地籍圖</span></label></div>
+<div class="fb" id="fb72"></div><div class="qnav-fallback"><a class="secondary" href="#q71">上一題</a><a href="#q73">下一題</a></div>
+</section><section class="q" data-answer="4" id="q73">
+<div class="meta">第 73 題　專業科目｜基本圖學｜原題第 65 題</div>
+<div class="stem">球外任意一點與球之相切線有幾條？</div>
+<div class="opts"><label class="opt"><input name="q73" type="radio" value="1"/><span><b>1.</b> 1</span></label><label class="opt"><input name="q73" type="radio" value="2"/><span><b>2.</b> 2</span></label><label class="opt"><input name="q73" type="radio" value="3"/><span><b>3.</b> 4</span></label><label class="opt"><input class="correct" name="q73" type="radio" value="4"/><span><b>4.</b> 無限多</span></label></div>
+<div class="fb" id="fb73"></div><div class="qnav-fallback"><a class="secondary" href="#q72">上一題</a><a href="#q74">下一題</a></div>
+</section><section class="q" data-answer="1" id="q74">
+<div class="meta">第 74 題　專業科目｜識圖｜原題第 76 題</div>
+<div class="stem">影響混凝土拌合之工作性的主要條件為</div>
+<div class="opts"><label class="opt"><input class="correct" name="q74" type="radio" value="1"/><span><b>1.</b> 水灰比</span></label><label class="opt"><input name="q74" type="radio" value="2"/><span><b>2.</b> 砂用量</span></label><label class="opt"><input name="q74" type="radio" value="3"/><span><b>3.</b> 拌合時間</span></label><label class="opt"><input name="q74" type="radio" value="4"/><span><b>4.</b> 級配</span></label></div>
+<div class="fb" id="fb74"></div><div class="qnav-fallback"><a class="secondary" href="#q73">上一題</a><a href="#q75">下一題</a></div>
+</section><section class="q" data-answer="1" id="q75">
+<div class="meta">第 75 題　共同科目4｜節能減碳｜原題第 62 題</div>
+<div class="stem">電氣設備裝設於有潮濕水氣的環境時，最應該優先檢查及確認的措施是？</div>
+<div class="opts"><label class="opt"><input class="correct" name="q75" type="radio" value="1"/><span><b>1.</b> 有無在線路上裝設漏電斷路器</span></label><label class="opt"><input name="q75" type="radio" value="2"/><span><b>2.</b> 電氣設備上有無安全保險絲</span></label><label class="opt"><input name="q75" type="radio" value="3"/><span><b>3.</b> 有無過 載及過熱保護設備</span></label><label class="opt"><input name="q75" type="radio" value="4"/><span><b>4.</b> 有無可能傾倒及生鏽</span></label></div>
+<div class="fb" id="fb75"></div><div class="qnav-fallback"><a class="secondary" href="#q74">上一題</a><a href="#q76">下一題</a></div>
+</section><section class="q" data-answer="3" id="q76">
+<div class="meta">第 76 題　專業科目｜繪製圖樣｜原題第 120 題</div>
+<div class="stem">工程材料中，水泥混凝土之單位重量為</div>
+<div class="opts"><label class="opt"><input name="q76" type="radio" value="1"/><span><b>1.</b> 1500 ㎏/m</span></label><label class="opt"><input name="q76" type="radio" value="2"/><span><b>2.</b> 2100 ㎏/m</span></label><label class="opt"><input class="correct" name="q76" type="radio" value="3"/><span><b>3.</b> 2300 ㎏/m</span></label><label class="opt"><input name="q76" type="radio" value="4"/><span><b>4.</b> 3000 ㎏/m</span></label></div>
+<div class="fb" id="fb76"></div><div class="qnav-fallback"><a class="secondary" href="#q75">上一題</a><a href="#q77">下一題</a></div>
+</section><section class="q" data-answer="4" id="q77">
+<div class="meta">第 77 題　專業科目｜識圖｜原題第 71 題</div>
+<div class="stem">石材的正確符號為</div><div class="visual"><img alt="題目圖示" src="data:image/webp;base64,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"/></div>
+<div class="opts"><label class="opt"><input name="q77" type="radio" value="1"/><span><b>1.</b> 請參考題目圖示</span></label><label class="opt"><input name="q77" type="radio" value="2"/><span><b>2.</b> 請參考題目圖示</span></label><label class="opt"><input name="q77" type="radio" value="3"/><span><b>3.</b> 請參考題目圖示</span></label><label class="opt"><input class="correct" name="q77" type="radio" value="4"/><span><b>4.</b> 請參考題目圖示</span></label></div>
+<div class="fb" id="fb77"></div><div class="qnav-fallback"><a class="secondary" href="#q76">上一題</a><a href="#q78">下一題</a></div>
+</section><section class="q" data-answer="2" id="q78">
+<div class="meta">第 78 題　專業科目｜繪製圖樣｜原題第 58 題</div>
+<div class="stem">建築物重要或特殊部份詳細圖需註明各部尺寸及構造材料，其比例不得小於</div>
+<div class="opts"><label class="opt"><input name="q78" type="radio" value="1"/><span><b>1.</b> 1/100</span></label><label class="opt"><input class="correct" name="q78" type="radio" value="2"/><span><b>2.</b> 1/30</span></label><label class="opt"><input name="q78" type="radio" value="3"/><span><b>3.</b> 1/200</span></label><label class="opt"><input name="q78" type="radio" value="4"/><span><b>4.</b> 1/60</span></label></div>
+<div class="fb" id="fb78"></div><div class="qnav-fallback"><a class="secondary" href="#q77">上一題</a><a href="#q79">下一題</a></div>
+</section><section class="q" data-answer="3" id="q79">
+<div class="meta">第 79 題　專業科目｜基本工作｜原題第 90 題</div>
+<div class="stem">下列何者屬於Windows 附屬應用程式中的應用程式？</div>
+<div class="opts"><label class="opt"><input name="q79" type="radio" value="1"/><span><b>1.</b> Word</span></label><label class="opt"><input name="q79" type="radio" value="2"/><span><b>2.</b> AutoCAD</span></label><label class="opt"><input class="correct" name="q79" type="radio" value="3"/><span><b>3.</b> 記事本</span></label><label class="opt"><input name="q79" type="radio" value="4"/><span><b>4.</b> Excel</span></label></div>
+<div class="fb" id="fb79"></div><div class="qnav-fallback"><a class="secondary" href="#q78">上一題</a><a href="#q80">下一題</a></div>
+</section><section class="q" data-answer="3" id="q80">
+<div class="meta">第 80 題　專業科目｜繪製圖樣｜原題第 99 題</div>
+<div class="stem">商標註冊應向那個機關申請﹖</div>
+<div class="opts"><label class="opt"><input name="q80" type="radio" value="1"/><span><b>1.</b> 經濟部中央標準局</span></label><label class="opt"><input name="q80" type="radio" value="2"/><span><b>2.</b> 經濟部商業司</span></label><label class="opt"><input class="correct" name="q80" type="radio" value="3"/><span><b>3.</b> 經濟部智慧財產局</span></label><label class="opt"><input name="q80" type="radio" value="4"/><span><b>4.</b> 經濟部工業局</span></label></div>
+<div class="fb" id="fb80"></div><div class="qnav-fallback"><a class="secondary" href="#q79">上一題</a><a class="submit-link" href="#result">交卷並計分</a></div>
+</section>
+<section class="result-page" id="result"><h2>測驗結果</h2><div class="score-card"><div class="score-main">答對 <span class="correct-count"></span> 題 / 80 題</div><div class="score-percent">分數：<span class="percent-note">每題 1.25 分</span></div><div class="score-help">下方列出答錯或未作答的題目；若沒有項目，代表 80 題全對。</div></div><h3>錯題／未作答檢討</h3><div class="wrong-list"><div class="wrong-item" id="wrong1"><div class="wrong-head">第 1 題　專業科目｜基本圖學｜原題第 42 題</div><div class="wrong-stem">如果僅用一塊60°直角三角板與平行尺，最多可將一圓分為</div><div class="your-answer">你的答案：<span class="ya1">1. 3</span><span class="ya2">2. 6</span><span class="ya3">3. 9</span><span class="ya4">4. 12 等分</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 12 等分</div></div><div class="wrong-item" id="wrong2"><div class="wrong-head">第 2 題　專業科目｜識圖｜原題第 61 題</div><div class="wrong-stem">非供公眾使用之7 層建築物，其防空避難室應大於</div><div class="your-answer">你的答案：<span class="ya1">1. 最大層樓地板面積</span><span class="ya2">2. 建築面積</span><span class="ya3">3. 總樓地板面積</span><span class="ya4">4. 地面層樓 地板面積 之1/3</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：2. 建築面積</div></div><div class="wrong-item" id="wrong3"><div class="wrong-head">第 3 題　共同科目4｜節能減碳｜原題第 25 題</div><div class="wrong-stem">依據台灣電力公司三段式時間電價（尖峰、半尖峰及離峰時段）的規定， 哪個時段電價最便宜？</div><div class="your-answer">你的答案：<span class="ya1">1. 尖峰時段</span><span class="ya2">2. 夏月半尖峰時段</span><span class="ya3">3. 非夏月半尖峰時 段</span><span class="ya4">4. 離峰時段</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 離峰時段</div></div><div class="wrong-item" id="wrong4"><div class="wrong-head">第 4 題　專業科目｜繪製圖樣｜原題第 48 題</div><div class="wrong-stem">樓梯間防火安全門以安裝下列那一種門鎖最為理想？</div><div class="your-answer">你的答案：<span class="ya1">1. 喇叭鎖</span><span class="ya2">2. 扳手鎖</span><span class="ya3">3. 彈簧鎖</span><span class="ya4">4. 推桿或壓桿式門鎖</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 推桿或壓桿式門鎖</div></div><div class="wrong-item" id="wrong5"><div class="wrong-head">第 5 題　共同科目1｜職業安全衛生｜原題第 77 題</div><div class="wrong-stem">依勞動檢查法施行細則規定，事業單位如不服勞動檢查結果，應於勞動檢 查結果通知書送達之次日起10 日內，以書面敘明理由向勞動檢查機構提 出？</div><div class="your-answer">你的答案：<span class="ya1">1. 申訴</span><span class="ya2">2. 陳情</span><span class="ya3">3. 抗議</span><span class="ya4">4. 異議</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 異議</div></div><div class="wrong-item" id="wrong6"><div class="wrong-head">第 6 題　專業科目｜基本工作｜原題第 5 題</div><div class="wrong-stem">在AutoCAD 中，SNAP 的開啟或關閉，可以用功能鍵</div><div class="your-answer">你的答案：<span class="ya1">1. F6</span><span class="ya2">2. F7</span><span class="ya3">3. F8</span><span class="ya4">4. F9 控制</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. F9 控制</div></div><div class="wrong-item" id="wrong7"><div class="wrong-head">第 7 題　專業科目｜繪製圖樣｜原題第 121 題</div><div class="wrong-stem">一般住宅樓梯及平台最小淨寬為</div><div class="your-answer">你的答案：<span class="ya1">1. 75cm 以上</span><span class="ya2">2. 60cm 以上</span><span class="ya3">3. 80cm 以上</span><span class="ya4">4. 90cm 以上</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. 75cm 以上</div></div><div class="wrong-item" id="wrong8"><div class="wrong-head">第 8 題　專業科目｜基本圖學｜原題第 31 題</div><div class="wrong-stem">可調整角度三角板，其主要用途是</div><div class="your-answer">你的答案：<span class="ya1">1. 畫垂直線</span><span class="ya2">2. 畫平行線</span><span class="ya3">3. 畫曲線</span><span class="ya4">4. 畫任何角度之斜線</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 畫任何角度之斜線</div></div><div class="wrong-item" id="wrong9"><div class="wrong-head">第 9 題　專業科目｜基本工作｜原題第 23 題</div><div class="wrong-stem">BIOS 是指</div><div class="your-answer">你的答案：<span class="ya1">1. 位元指令</span><span class="ya2">2. 位元片微處理機</span><span class="ya3">3. 輸入輸出系統</span><span class="ya4">4. 布林運算</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 輸入輸出系統</div></div><div class="wrong-item" id="wrong10"><div class="wrong-head">第 10 題　專業科目｜識圖｜原題第 25 題</div><div class="wrong-stem">建築執照申請圖上著深綠色之線條" "，深綠色線是表示</div><div class="your-answer">你的答案：<span class="ya1">1. 建築線</span><span class="ya2">2. 污水管線</span><span class="ya3">3. 地 平線</span><span class="ya4">4. 地界線</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 地界線</div></div><div class="wrong-item" id="wrong11"><div class="wrong-head">第 11 題　專業科目｜基本工作｜原題第 86 題</div><div class="wrong-stem">在網際網路中，下列何種為與人溝通的基本橋樑？</div><div class="your-answer">你的答案：<span class="ya1">1. 暱稱</span><span class="ya2">2. 網址</span><span class="ya3">3. 電話</span><span class="ya4">4. 年齡</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：2. 網址</div></div><div class="wrong-item" id="wrong12"><div class="wrong-head">第 12 題　共同科目3｜環境保護｜原題第 7 題</div><div class="wrong-stem">外食自備餐具是落實綠色消費的哪一項表現？</div><div class="your-answer">你的答案：<span class="ya1">1. 重複使用</span><span class="ya2">2. 回收再生</span><span class="ya3">3. 環保選購</span><span class="ya4">4. 降低成本</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. 重複使用</div></div><div class="wrong-item" id="wrong13"><div class="wrong-head">第 13 題　專業科目｜識圖｜原題第 126 題</div><div class="wrong-stem">一般所謂輕型鋼係指厚度在</div><div class="your-answer">你的答案：<span class="ya1">1. 4 ㎜</span><span class="ya2">2. 8 ㎜</span><span class="ya3">3. 10 ㎜</span><span class="ya4">4. 12 ㎜ 以下者</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. 4 ㎜</div></div><div class="wrong-item" id="wrong14"><div class="wrong-head">第 14 題　專業科目｜繪製圖樣｜原題第 126 題</div><div class="wrong-stem">一般公寓住宅掛牆式瓦斯熱水器最適合安置於</div><div class="your-answer">你的答案：<span class="ya1">1. 浴廁內</span><span class="ya2">2. 浴廁門口</span><span class="ya3">3. 廚房</span><span class="ya4">4. 室外</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 室外</div></div><div class="wrong-item" id="wrong15"><div class="wrong-head">第 15 題　專業科目｜基本圖學｜原題第 11 題</div><div class="wrong-stem">依CNS 規定，製圖用紙A1 圖紙的尺寸規格為</div><div class="your-answer">你的答案：<span class="ya1">1. 210×297 ㎜</span><span class="ya2">2. 297×420 ㎜</span><span class="ya3">3. 420×594 ㎜</span><span class="ya4">4. 594×841 ㎜</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 594×841 ㎜</div></div><div class="wrong-item" id="wrong16"><div class="wrong-head">第 16 題　共同科目2｜工作倫理與職業道德｜原題第 92 題</div><div class="wrong-stem">根據性別平等工作法規範職場性騷擾範疇，下列何者錯誤？</div><div class="your-answer">你的答案：<span class="ya1">1. 上班執行職 務時，任何人以性要求、具有性意味或性別歧視之言詞或行為，造成敵意 性、脅迫性或冒犯性之工作環境</span><span class="ya2">2. 對僱用、求職或執行職務關係受自己指 揮、監督之人，利用權勢或機會為性騷擾</span><span class="ya3">3. 與朋友聚餐後回家時，被陌生 人以盯梢、守候、尾隨跟蹤</span><span class="ya4">4. 雇主對受僱者或求職者為明示或暗示之性要 求、具有性意味或性別歧視之言詞或行為</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 與朋友聚餐後回家時，被陌生 人以盯梢、守候、尾隨跟蹤</div></div><div class="wrong-item" id="wrong17"><div class="wrong-head">第 17 題　專業科目｜識圖｜原題第 38 題</div><div class="wrong-stem">建築工程中使用的1:3:6 混凝土，強度約為</div><div class="your-answer">你的答案：<span class="ya1">1. 2000psi</span><span class="ya2">2. 2500psi</span><span class="ya3">3. 3000psi</span><span class="ya4">4. 4000psi</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. 2000psi</div></div><div class="wrong-item" id="wrong18"><div class="wrong-head">第 18 題　專業科目｜繪製圖樣｜原題第 102 題</div><div class="wrong-stem">公司可否在週六下午播放二輪國片給員工免費觀賞作為員工福利﹖</div><div class="your-answer">你的答案：<span class="ya1">1. 可以，但要付錢給該國片的權利人</span><span class="ya2">2. 可 以，但要付錢給著作權委員會</span><span class="ya3">3. 可以，且不必付錢</span><span class="ya4">4. 不可以</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. 可以，但要付錢給該國片的權利人</div></div><div class="wrong-item" id="wrong19"><div class="wrong-head">第 19 題　專業科目｜識圖｜原題第 95 題</div><div class="wrong-stem">一般RC 樓版的鋼筋保護層約為</div><div class="your-answer">你的答案：<span class="ya1">1. 5 公分</span><span class="ya2">2. 4 公分</span><span class="ya3">3. 3 公分</span><span class="ya4">4. 2 公分</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 2 公分</div></div><div class="wrong-item" id="wrong20"><div class="wrong-head">第 20 題　專業科目｜識圖｜原題第 97 題</div><div class="wrong-stem">根據法規規定，磚造建築物的簷高不得超過</div><div class="your-answer">你的答案：<span class="ya1">1. 6 公尺</span><span class="ya2">2. 7 公尺</span><span class="ya3">3. 9 公尺</span><span class="ya4">4. 12 公尺</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：2. 7 公尺</div></div><div class="wrong-item" id="wrong21"><div class="wrong-head">第 21 題　專業科目｜基本工作｜原題第 17 題</div><div class="wrong-stem">有關BIOS 的敘述，下面何者是錯誤的？</div><div class="your-answer">你的答案：<span class="ya1">1. BIOS 是控制電腦輸出輸入的系統</span><span class="ya2">2. BIOS 是一顆ROM，其內含有控 制軟體</span><span class="ya3">3. BIOS 是不會中毒的</span><span class="ya4">4. 當電腦開機後，BIOS 就會立刻運作檢查您電腦上的相關設備是否正確</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. BIOS 是不會中毒的</div></div><div class="wrong-item" id="wrong22"><div class="wrong-head">第 22 題　專業科目｜基本工作｜原題第 67 題</div><div class="wrong-stem">AutoCAD 中，自既有的圖檔中直接引用圖塊或圖層的介面指令為</div><div class="your-answer">你的答案：<span class="ya1">1. ADC</span><span class="ya2">2. MINSERT</span><span class="ya3">3. Xref</span><span class="ya4">4. Mlayer</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. ADC</div></div><div class="wrong-item" id="wrong23"><div class="wrong-head">第 23 題　專業科目｜基本圖學｜原題第 1 題</div><div class="wrong-stem">下列何種視圖不屬於正投影視圖？</div><div class="your-answer">你的答案：<span class="ya1">1. 上視圖</span><span class="ya2">2. 正視圖</span><span class="ya3">3. 透視圖</span><span class="ya4">4. 側視圖</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 透視圖</div></div><div class="wrong-item" id="wrong24"><div class="wrong-head">第 24 題　專業科目｜基本圖學｜原題第 20 題</div><div class="wrong-stem">建築物的樓層高度通常都標註在</div><div class="your-answer">你的答案：<span class="ya1">1. 平面圖</span><span class="ya2">2. 立面圖</span><span class="ya3">3. 大樣圖</span><span class="ya4">4. 配置圖</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：2. 立面圖</div></div><div class="wrong-item" id="wrong25"><div class="wrong-head">第 25 題　專業科目｜基本工作｜原題第 30 題</div><div class="wrong-stem">電腦中所稱之唯讀存取記憶體為</div><div class="your-answer">你的答案：<span class="ya1">1. RAM</span><span class="ya2">2. ROM</span><span class="ya3">3. CDRW</span><span class="ya4">4. MO</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：2. ROM</div></div><div class="wrong-item" id="wrong26"><div class="wrong-head">第 26 題　專業科目｜繪製圖樣｜原題第 76 題</div><div class="wrong-stem">建築電氣設備圖例中，何者表示三路開關？</div><div class="your-answer">你的答案：<span class="ya1">1. ●</span><span class="ya2">2. ●</span><span class="ya3">3. ●</span><span class="ya4">4. ●</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. ●</div></div><div class="wrong-item" id="wrong27"><div class="wrong-head">第 27 題　專業科目｜識圖｜原題第 18 題</div><div class="wrong-stem">在比例尺為1/300 的圖面上，以足尺量得5 ㎝長度的物體，其實際長度為</div><div class="your-answer">你的答案：<span class="ya1">1. 6m</span><span class="ya2">2. 60m</span><span class="ya3">3. 15m</span><span class="ya4">4. 150m</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 15m</div></div><div class="wrong-item" id="wrong28"><div class="wrong-head">第 28 題　專業科目｜識圖｜原題第 92 題</div><div class="wrong-stem">欲清洗馬賽克、瓷磚等表面污物時，應使用</div><div class="your-answer">你的答案：<span class="ya1">1. 強硝酸</span><span class="ya2">2. 稀鹽酸水</span><span class="ya3">3. 濃硫酸</span><span class="ya4">4. 食鹽水</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：2. 稀鹽酸水</div></div><div class="wrong-item" id="wrong29"><div class="wrong-head">第 29 題　專業科目｜基本圖學｜原題第 83 題</div><div class="wrong-stem">尺度線必須與所標註長度之面</div><div class="your-answer">你的答案：<span class="ya1">1. 平行</span><span class="ya2">2. 垂直</span><span class="ya3">3. 相交</span><span class="ya4">4. 重疊</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. 平行</div></div><div class="wrong-item" id="wrong30"><div class="wrong-head">第 30 題　專業科目｜繪製圖樣｜原題第 45 題</div><div class="wrong-stem">常時關閉式之防火門構造要求，下列何者不符規定？</div><div class="your-answer">你的答案：<span class="ya1">1. 免用鑰匙即可開啟</span><span class="ya2">2. 單一門扇面積不得超過2.5 平方公 尺</span><span class="ya3">3. 不得設置門止</span><span class="ya4">4. 門扇或門樘上應標示常時關閉式防火門等文字</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：2. 單一門扇面積不得超過2.5 平方公 尺</div></div><div class="wrong-item" id="wrong31"><div class="wrong-head">第 31 題　專業科目｜識圖｜原題第 16 題</div><div class="wrong-stem">建築構造中，所謂的五皮柏油油毛氈防水層是指</div><div class="your-answer">你的答案：<span class="ya1">1. 油毛氈3 皮、柏油2 皮</span><span class="ya2">2. 油毛氈5 皮、柏油4 皮</span><span class="ya3">3. 油毛氈2 皮、柏油3 皮</span><span class="ya4">4. 油毛氈4 皮、柏油5 皮</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 油毛氈2 皮、柏油3 皮</div></div><div class="wrong-item" id="wrong32"><div class="wrong-head">第 32 題　專業科目｜繪製圖樣｜原題第 59 題</div><div class="wrong-stem">小學校舍供兒童使用之樓梯，其級高不得大於</div><div class="your-answer">你的答案：<span class="ya1">1. 12 公分</span><span class="ya2">2. 20 公分</span><span class="ya3">3. 16 公分</span><span class="ya4">4. 18 公分</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 16 公分</div></div><div class="wrong-item" id="wrong33"><div class="wrong-head">第 33 題　專業科目｜識圖｜原題第 10 題</div><div class="wrong-stem">結構圖的圖號為</div><div class="your-answer">你的答案：<span class="ya1">1. A</span><span class="ya2">2. S</span><span class="ya3">3. P</span><span class="ya4">4. F</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：2. S</div></div><div class="wrong-item" id="wrong34"><div class="wrong-head">第 34 題　專業科目｜繪製圖樣｜原題第 3 題</div><div class="wrong-stem">學校樓梯一次爬行的垂直高不得超過多少公尺，否則應在其間加設平臺？</div><div class="your-answer">你的答案：<span class="ya1">1. 2 公尺</span><span class="ya2">2. 3 公尺</span><span class="ya3">3. 4 公尺</span><span class="ya4">4. 沒有限 制</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：2. 3 公尺</div></div><div class="wrong-item" id="wrong35"><div class="wrong-head">第 35 題　專業科目｜繪製圖樣｜原題第 105 題</div><div class="wrong-stem">電腦程式著作之著作財產權存續至著作公開發表後幾年﹖</div><div class="your-answer">你的答案：<span class="ya1">1. 20 年</span><span class="ya2">2. 40 年</span><span class="ya3">3. 50 年</span><span class="ya4">4. 60 年</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 50 年</div></div><div class="wrong-item" id="wrong36"><div class="wrong-head">第 36 題　專業科目｜繪製圖樣｜原題第 42 題</div><div class="wrong-stem">依規定設置供殘障者使用的室外引導通路之淨寬不得小於</div><div class="your-answer">你的答案：<span class="ya1">1. 1.0 公尺</span><span class="ya2">2. 1.3 公尺</span><span class="ya3">3. 1.5 公尺</span><span class="ya4">4. 2.0 公尺</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：2. 1.3 公尺</div></div><div class="wrong-item" id="wrong37"><div class="wrong-head">第 37 題　專業科目｜識圖｜原題第 125 題</div><div class="wrong-stem">房屋之外部主要裝修材料應標示於何種圖面上？</div><div class="your-answer">你的答案：<span class="ya1">1. 平面圖</span><span class="ya2">2. 立面圖</span><span class="ya3">3. 大樣圖</span><span class="ya4">4. 透視圖</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：2. 立面圖</div></div><div class="wrong-item" id="wrong38"><div class="wrong-head">第 38 題　專業科目｜基本工作｜原題第 98 題</div><div class="wrong-stem">在AutoCAD 中，使用VIEWPORTS 指令是用來</div><div class="your-answer">你的答案：<span class="ya1">1. 製作非重疊視埠</span><span class="ya2">2. 儲存或取回視景</span><span class="ya3">3. 製作重疊視埠</span><span class="ya4">4. 自訂座 標</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. 製作非重疊視埠</div></div><div class="wrong-item" id="wrong39"><div class="wrong-head">第 39 題　專業科目｜繪製圖樣｜原題第 65 題</div><div class="wrong-stem">集合住宅樓梯級高尺寸不得超過</div><div class="your-answer">你的答案：<span class="ya1">1. 24 公分</span><span class="ya2">2. 20 公分</span><span class="ya3">3. 18 公分</span><span class="ya4">4. 16 公分</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：2. 20 公分</div></div><div class="wrong-item" id="wrong40"><div class="wrong-head">第 40 題　專業科目｜識圖｜原題第 100 題</div><div class="wrong-stem">以鋼筋混凝土梁柱及樓版加強的磚造建築物，其簷高不得超過多少公尺？</div><div class="your-answer">你的答案：<span class="ya1">1. 6 公尺</span><span class="ya2">2. 9 公尺</span><span class="ya3">3. 10 公尺</span><span class="ya4">4. 12 公尺</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 10 公尺</div></div><div class="wrong-item" id="wrong41"><div class="wrong-head">第 41 題　共同科目3｜環境保護｜原題第 57 題</div><div class="wrong-stem">哪一種家庭廢棄物可用來作為製造肥皂的主要原料？</div><div class="your-answer">你的答案：<span class="ya1">1. 食醋</span><span class="ya2">2. 果皮</span><span class="ya3">3. 回 鍋油</span><span class="ya4">4. 熟廚餘</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 回 鍋油</div></div><div class="wrong-item" id="wrong42"><div class="wrong-head">第 42 題　專業科目｜識圖｜原題第 119 題</div><div class="wrong-stem">混凝土之坍度單位為</div><div class="your-answer">你的答案：<span class="ya1">1. kg/cm</span><span class="ya2">2. 磅/吋</span><span class="ya3">3. cm</span><span class="ya4">4. kg</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. cm</div></div><div class="wrong-item" id="wrong43"><div class="wrong-head">第 43 題　共同科目2｜工作倫理與職業道德｜原題第 90 題</div><div class="wrong-stem">根據性別平等工作法，有關雇主防治性騷擾之責任與罰則，下列何者錯 誤？</div><div class="your-answer">你的答案：<span class="ya1">1. 僱用受僱者30 人以上者，應訂定性騷擾防治措施、申訴及懲戒規 範</span><span class="ya2">2. 雇主知悉性騷擾發生時，應採取立即有效之糾正及補救措施</span><span class="ya3">3. 雇主 違反應訂定性騷擾防治措施之規定時，處以罰鍰即可，不用公布其姓名</span><span class="ya4">4. 雇主違反應訂定性騷擾申訴管道者，應限期令其改善，屆期未改善者，應 按次處罰</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 雇主 違反應訂定性騷擾防治措施之規定時，處以罰鍰即可，不用公布其姓名</div></div><div class="wrong-item" id="wrong44"><div class="wrong-head">第 44 題　專業科目｜識圖｜原題第 67 題</div><div class="wrong-stem">建築圖面上標示B.C.L 為</div><div class="your-answer">你的答案：<span class="ya1">1. 柱中心線</span><span class="ya2">2. 梁中心線</span><span class="ya3">3. 樓版中心線</span><span class="ya4">4. 牆中心線</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：2. 梁中心線</div></div><div class="wrong-item" id="wrong45"><div class="wrong-head">第 45 題　專業科目｜繪製圖樣｜原題第 4 題</div><div class="wrong-stem">供集合住宅使用的建築物，其每層的樓地板面積超過多少，則需設置兩座以上的直通樓梯通達避難層或地面</div><div class="your-answer">你的答案：<span class="ya1">1. 180 ㎡</span><span class="ya2">2. 200 ㎡</span><span class="ya3">3. 220 ㎡</span><span class="ya4">4. 240 ㎡</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 240 ㎡</div></div><div class="wrong-item" id="wrong46"><div class="wrong-head">第 46 題　專業科目｜基本工作｜原題第 22 題</div><div class="wrong-stem">電腦繪圖軟體AutoCAD 中，指令LINE 屬</div><div class="your-answer">你的答案：<span class="ya1">1. 畫直線</span><span class="ya2">2. 畫圓</span><span class="ya3">3. 畫弧線</span><span class="ya4">4. 畫曲線</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. 畫直線</div></div><div class="wrong-item" id="wrong47"><div class="wrong-head">第 47 題　共同科目4｜節能減碳｜原題第 51 題</div><div class="wrong-stem">有關建築之外殼節能設計，下列敘述何者錯誤？</div><div class="your-answer">你的答案：<span class="ya1">1. 開窗區域設置遮陽設備</span><span class="ya2">2. 大開窗面避免設置於東西日曬方位</span><span class="ya3">3. 做好屋頂隔熱設施</span><span class="ya4">4. 宜採用全面 玻璃造型設計，以利自然採光</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 宜採用全面 玻璃造型設計，以利自然採光</div></div><div class="wrong-item" id="wrong48"><div class="wrong-head">第 48 題　專業科目｜識圖｜原題第 24 題</div><div class="wrong-stem">都市計畫使用分區圖中，行政區是以何種顏色外框表示？</div><div class="your-answer">你的答案：<span class="ya1">1. 綠色</span><span class="ya2">2. 黃色</span><span class="ya3">3. 紅色</span><span class="ya4">4. 褐色</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. 綠色</div></div><div class="wrong-item" id="wrong49"><div class="wrong-head">第 49 題　共同科目4｜節能減碳｜原題第 58 題</div><div class="wrong-stem">依據我國現行國家標準規定，冷氣機的冷氣能力標示應以何種單位表示？</div><div class="your-answer">你的答案：<span class="ya1">1. kW</span><span class="ya2">2. BTU/h</span><span class="ya3">3. kcal/h</span><span class="ya4">4. RT</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. kW</div></div><div class="wrong-item" id="wrong50"><div class="wrong-head">第 50 題　專業科目｜基本工作｜原題第 95 題</div><div class="wrong-stem">在Windows 作業系統中，如何取得線上輔助說明？</div><div class="your-answer">你的答案：<span class="ya1">1. 按ESC 鍵</span><span class="ya2">2. 按F3 鍵</span><span class="ya3">3. 「開始／執行」</span><span class="ya4">4. 按F1 鍵</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 按F1 鍵</div></div><div class="wrong-item" id="wrong51"><div class="wrong-head">第 51 題　專業科目｜基本工作｜原題第 79 題</div><div class="wrong-stem">TWINCAD、AutoCAD 及Microstation 都可載入的圖檔為</div><div class="your-answer">你的答案：<span class="ya1">1. .dgn</span><span class="ya2">2. .dwg</span><span class="ya3">3. .wrk</span><span class="ya4">4. .gcd</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：2. .dwg</div></div><div class="wrong-item" id="wrong52"><div class="wrong-head">第 52 題　專業科目｜識圖｜原題第 79 題</div><div class="wrong-stem">下列何者非建築平面圖常用比例尺？</div><div class="your-answer">你的答案：<span class="ya1">1. 1/30</span><span class="ya2">2. 1/50</span><span class="ya3">3. 1/100</span><span class="ya4">4. 1/200</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. 1/30</div></div><div class="wrong-item" id="wrong53"><div class="wrong-head">第 53 題　共同科目1｜職業安全衛生｜原題第 86 題</div><div class="wrong-stem">下列何者非屬從事起重吊掛作業導致物體飛落災害之可能原因？</div><div class="your-answer">你的答案：<span class="ya1">1. 吊鉤未 設防滑舌片致吊掛鋼索鬆脫</span><span class="ya2">2. 鋼索斷裂</span><span class="ya3">3. 超過額定荷重作業</span><span class="ya4">4. 過捲揚警 報裝置過度靈敏</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 過捲揚警 報裝置過度靈敏</div></div><div class="wrong-item" id="wrong54"><div class="wrong-head">第 54 題　專業科目｜基本圖學｜原題第 57 題</div><div class="wrong-stem">過圓周上任一點作切線，則此點與圓心連線必與該切線夾角成</div><div class="your-answer">你的答案：<span class="ya1">1. 30 度</span><span class="ya2">2. 45 度</span><span class="ya3">3. 60 度</span><span class="ya4">4. 90 度</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 90 度</div></div><div class="wrong-item" id="wrong55"><div class="wrong-head">第 55 題　專業科目｜基本圖學｜原題第 13 題</div><div class="wrong-stem">在平面上不共線的三個點，可以決定下列何種唯一之曲線？</div><div class="your-answer">你的答案：<span class="ya1">1. 圓</span><span class="ya2">2. 橢圓</span><span class="ya3">3. 拋物線</span><span class="ya4">4. 雙曲線</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. 圓</div></div><div class="wrong-item" id="wrong56"><div class="wrong-head">第 56 題　共同科目3｜環境保護｜原題第 66 題</div><div class="wrong-stem">依環境影響評估法規定，環境影響評估審查委員會審查環境影響說明書， 認定下列對環境有重大影響之虞者，應繼續進行第二階段環境影響評估， 下列何者非屬對環境有重大影響之虞者？</div><div class="your-answer">你的答案：<span class="ya1">1. 對保育類動植物之棲息生存有 顯著不利之影響</span><span class="ya2">2. 對國家經濟有顯著不利之影響</span><span class="ya3">3. 對國民健康有顯著不 利之影響</span><span class="ya4">4. 對其他國家之環境有顯著不利之影響</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：2. 對國家經濟有顯著不利之影響</div></div><div class="wrong-item" id="wrong57"><div class="wrong-head">第 57 題　專業科目｜繪製圖樣｜原題第 118 題</div><div class="wrong-stem">職業道德在職業訓練上是怎樣的課程？</div><div class="your-answer">你的答案：<span class="ya1">1. 必修</span><span class="ya2">2. 免修</span><span class="ya3">3. 選修</span><span class="ya4">4. 不關緊要</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. 必修</div></div><div class="wrong-item" id="wrong58"><div class="wrong-head">第 58 題　共同科目2｜工作倫理與職業道德｜原題第 30 題</div><div class="wrong-stem">所謂營業秘密，係指方法、技術、製程、配方、程式、設計或其他可用於 生產、銷售或經營之資訊，但其保障所需符合的要件不包括下列何者？</div><div class="your-answer">你的答案：<span class="ya1">1. 因其秘密性而具有實際之經濟價值者</span><span class="ya2">2. 所有人已採取合理之保密措施者</span><span class="ya3">3. 因其秘密性而具有潛在之經濟價值者</span><span class="ya4">4. 一般涉及該類資訊之人所知 者</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 一般涉及該類資訊之人所知 者</div></div><div class="wrong-item" id="wrong59"><div class="wrong-head">第 59 題　專業科目｜基本工作｜原題第 1 題</div><div class="wrong-stem">電腦輔助建築製圖，圖形檔的副檔名，下列何者為非？</div><div class="your-answer">你的答案：<span class="ya1">1. BAK</span><span class="ya2">2. DWG</span><span class="ya3">3. DXB</span><span class="ya4">4. DXF</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. BAK</div></div><div class="wrong-item" id="wrong60"><div class="wrong-head">第 60 題　專業科目｜繪製圖樣｜原題第 60 題</div><div class="wrong-stem">自動樓梯坡度不得大於</div><div class="your-answer">你的答案：<span class="ya1">1. 20 度</span><span class="ya2">2. 45 度</span><span class="ya3">3. 60 度</span><span class="ya4">4. 30 度</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 30 度</div></div><div class="wrong-item" id="wrong61"><div class="wrong-head">第 61 題　專業科目｜基本工作｜原題第 96 題</div><div class="wrong-stem">結束Windows 並關閉電源，何者為正確之操作程序？</div><div class="your-answer">你的答案：<span class="ya1">1. 「開始功能表／關機／關閉這台電腦」，再關閉電源</span><span class="ya2">2. 關閉電腦主機之電源</span><span class="ya3">3. 「開始功能表／關機／將電腦重新啟動在MS-DOS 程式」，再關閉電源</span><span class="ya4">4. 拔掉插頭</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. 「開始功能表／關機／關閉這台電腦」，再關閉電源</div></div><div class="wrong-item" id="wrong62"><div class="wrong-head">第 62 題　共同科目1｜職業安全衛生｜原題第 60 題</div><div class="wrong-stem">下列何種防護具較能消減噪音對聽力的危害？</div><div class="your-answer">你的答案：<span class="ya1">1. 棉花球</span><span class="ya2">2. 耳塞</span><span class="ya3">3. 耳罩</span><span class="ya4">4. 碎布球</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 耳罩</div></div><div class="wrong-item" id="wrong63"><div class="wrong-head">第 63 題　專業科目｜識圖｜原題第 132 題</div><div class="wrong-stem">混凝土圓柱試體，其直徑與高度之比為</div><div class="your-answer">你的答案：<span class="ya1">1. 1：1</span><span class="ya2">2. 1：1.5</span><span class="ya3">3. 1：2</span><span class="ya4">4. 1：3</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 1：2</div></div><div class="wrong-item" id="wrong64"><div class="wrong-head">第 64 題　共同科目2｜工作倫理與職業道德｜原題第 96 題</div><div class="wrong-stem">關於菸品對人體危害的敘述，下列何者正確？</div><div class="your-answer">你的答案：<span class="ya1">1. 只要開電風扇、或是抽風 機就可以去除菸霧中的有害物質</span><span class="ya2">2. 指定菸品（如：加熱菸）只要通過健康 風險評估，就不會危害健康，因此工作時如果想吸菸，就可以在職場拿出 來使用</span><span class="ya3">3. 雖然自己不吸菸，同事在旁邊吸菸，就會增加自己得肺癌的機率</span><span class="ya4">4. 只要不將菸吸入肺部，就不會對身體造成傷害</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 雖然自己不吸菸，同事在旁邊吸菸，就會增加自己得肺癌的機率</div></div><div class="wrong-item" id="wrong65"><div class="wrong-head">第 65 題　共同科目1｜職業安全衛生｜原題第 50 題</div><div class="wrong-stem">腕道症候群常發生於下列何種作業？</div><div class="your-answer">你的答案：<span class="ya1">1. 電腦鍵盤作業</span><span class="ya2">2. 潛水作業</span><span class="ya3">3. 堆高 機作業</span><span class="ya4">4. 第一種壓力容器作業</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. 電腦鍵盤作業</div></div><div class="wrong-item" id="wrong66"><div class="wrong-head">第 66 題　專業科目｜繪製圖樣｜原題第 52 題</div><div class="wrong-stem">一般空心磚之標準模距為</div><div class="your-answer">你的答案：<span class="ya1">1. 9 公分</span><span class="ya2">2. 19 公分</span><span class="ya3">3. 20 公分</span><span class="ya4">4. 40 公分</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 20 公分</div></div><div class="wrong-item" id="wrong67"><div class="wrong-head">第 67 題　專業科目｜識圖｜原題第 9 題</div><div class="wrong-stem">汽車坡道之坡度不得大於</div><div class="your-answer">你的答案：<span class="ya1">1. 1/6</span><span class="ya2">2. 1/8</span><span class="ya3">3. 1/10</span><span class="ya4">4. 1/12</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. 1/6</div></div><div class="wrong-item" id="wrong68"><div class="wrong-head">第 68 題　專業科目｜基本工作｜原題第 50 題</div><div class="wrong-stem">電腦繪圖軟體AutoCAD 中，欲複製LINE、CIRCLE 等圖元時，要使用下列何種指令？</div><div class="your-answer">你的答案：<span class="ya1">1. COPY</span><span class="ya2">2. TRIM</span><span class="ya3">3. EXTE ND</span><span class="ya4">4. MOVE</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. COPY</div></div><div class="wrong-item" id="wrong69"><div class="wrong-head">第 69 題　專業科目｜繪製圖樣｜原題第 15 題</div><div class="wrong-stem">新建築物的建造，在建築構造中採用能降低環境衝擊之設計，通常可以稱之為</div><div class="your-answer">你的答案：<span class="ya1">1. 新建築</span><span class="ya2">2. 綠建築</span><span class="ya3">3. 摩登建築</span><span class="ya4">4. 高級建築</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：2. 綠建築</div></div><div class="wrong-item" id="wrong70"><div class="wrong-head">第 70 題　共同科目3｜環境保護｜原題第 68 題</div><div class="wrong-stem">開發單位申請變更環境影響說明書、評估書內容或審查結論，符合下列哪 一情形，得檢附變更內容對照表辦理？</div><div class="your-answer">你的答案：<span class="ya1">1. 既有設備提昇產能而污染總量增 加在百分之十以下</span><span class="ya2">2. 降低環境保護設施處理等級或效率</span><span class="ya3">3. 環境監測計畫 變更</span><span class="ya4">4. 開發行為規模增加未超過百分之五</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 環境監測計畫 變更</div></div><div class="wrong-item" id="wrong71"><div class="wrong-head">第 71 題　專業科目｜基本工作｜原題第 24 題</div><div class="wrong-stem">位元(Bit)與字元(Byte)之關係比</div><div class="your-answer">你的答案：<span class="ya1">1. 1:2</span><span class="ya2">2. 1:4</span><span class="ya3">3. 1:8</span><span class="ya4">4. 1:16</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 1:8</div></div><div class="wrong-item" id="wrong72"><div class="wrong-head">第 72 題　專業科目｜繪製圖樣｜原題第 128 題</div><div class="wrong-stem">為瞭解建築基地的形狀大小，須向地政事務所請領</div><div class="your-answer">你的答案：<span class="ya1">1. 地質圖</span><span class="ya2">2. 地形圖</span><span class="ya3">3. 都市計畫圖</span><span class="ya4">4. 地籍圖</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 地籍圖</div></div><div class="wrong-item" id="wrong73"><div class="wrong-head">第 73 題　專業科目｜基本圖學｜原題第 65 題</div><div class="wrong-stem">球外任意一點與球之相切線有幾條？</div><div class="your-answer">你的答案：<span class="ya1">1. 1</span><span class="ya2">2. 2</span><span class="ya3">3. 4</span><span class="ya4">4. 無限多</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 無限多</div></div><div class="wrong-item" id="wrong74"><div class="wrong-head">第 74 題　專業科目｜識圖｜原題第 76 題</div><div class="wrong-stem">影響混凝土拌合之工作性的主要條件為</div><div class="your-answer">你的答案：<span class="ya1">1. 水灰比</span><span class="ya2">2. 砂用量</span><span class="ya3">3. 拌合時間</span><span class="ya4">4. 級配</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. 水灰比</div></div><div class="wrong-item" id="wrong75"><div class="wrong-head">第 75 題　共同科目4｜節能減碳｜原題第 62 題</div><div class="wrong-stem">電氣設備裝設於有潮濕水氣的環境時，最應該優先檢查及確認的措施是？</div><div class="your-answer">你的答案：<span class="ya1">1. 有無在線路上裝設漏電斷路器</span><span class="ya2">2. 電氣設備上有無安全保險絲</span><span class="ya3">3. 有無過 載及過熱保護設備</span><span class="ya4">4. 有無可能傾倒及生鏽</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：1. 有無在線路上裝設漏電斷路器</div></div><div class="wrong-item" id="wrong76"><div class="wrong-head">第 76 題　專業科目｜繪製圖樣｜原題第 120 題</div><div class="wrong-stem">工程材料中，水泥混凝土之單位重量為</div><div class="your-answer">你的答案：<span class="ya1">1. 1500 ㎏/m</span><span class="ya2">2. 2100 ㎏/m</span><span class="ya3">3. 2300 ㎏/m</span><span class="ya4">4. 3000 ㎏/m</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 2300 ㎏/m</div></div><div class="wrong-item" id="wrong77"><div class="wrong-head">第 77 題　專業科目｜識圖｜原題第 71 題</div><div class="wrong-stem">石材的正確符號為</div><div class="your-answer">你的答案：<span class="ya1">1. 請參考題目圖示</span><span class="ya2">2. 請參考題目圖示</span><span class="ya3">3. 請參考題目圖示</span><span class="ya4">4. 請參考題目圖示</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：4. 請參考題目圖示</div></div><div class="wrong-item" id="wrong78"><div class="wrong-head">第 78 題　專業科目｜繪製圖樣｜原題第 58 題</div><div class="wrong-stem">建築物重要或特殊部份詳細圖需註明各部尺寸及構造材料，其比例不得小於</div><div class="your-answer">你的答案：<span class="ya1">1. 1/100</span><span class="ya2">2. 1/30</span><span class="ya3">3. 1/200</span><span class="ya4">4. 1/60</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：2. 1/30</div></div><div class="wrong-item" id="wrong79"><div class="wrong-head">第 79 題　專業科目｜基本工作｜原題第 90 題</div><div class="wrong-stem">下列何者屬於Windows 附屬應用程式中的應用程式？</div><div class="your-answer">你的答案：<span class="ya1">1. Word</span><span class="ya2">2. AutoCAD</span><span class="ya3">3. 記事本</span><span class="ya4">4. Excel</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 記事本</div></div><div class="wrong-item" id="wrong80"><div class="wrong-head">第 80 題　專業科目｜繪製圖樣｜原題第 99 題</div><div class="wrong-stem">商標註冊應向那個機關申請﹖</div><div class="your-answer">你的答案：<span class="ya1">1. 經濟部中央標準局</span><span class="ya2">2. 經濟部商業司</span><span class="ya3">3. 經濟部智慧財產局</span><span class="ya4">4. 經濟部工業局</span><span class="ya0">未作答</span></div><div class="correct-answer">正確答案：3. 經濟部智慧財產局</div></div></div><div class="result-actions"><a href="#q1">回第 1 題檢查答案</a></div></section></div>
+
+
+
+</body></html>
